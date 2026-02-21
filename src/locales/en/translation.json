@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Front-End Developer Portfolio - Elaine Tavares"
+},
+
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Technologies",
+    "about": "About me",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Elaine Tavares.",
+    "title1": "Junior",
+    "title2": "Front-End Developer"
+},
+
+  "buttons": {
+    "cv": "View Resume",
+    "cv2": "Download Resume"
+  },
+  
+  "projects": {
+    "title": "Projects",
+    "project1": {
+      "in_development": "In Development...",
+      "name": "User Registration and Login System",
+      "description": "<1>Description: </1>User registration and login system with form validation and secure authentication, including password encryption, email confirmation, and password recovery functionality. Protected routes and full front-end and back-end integration, simulating a real-world authentication flow.",
+      "technologies": "<1>Technologies: </1> React | CSS Modules | PHP | MySQL"
+    },
+    "project2": {
+      "in_development": "In Development",
+      "name": "Elaine TavaresWeb' Portfolio",
+      "description": "<1>Description: </1> Responsive SPA portfolio built with React on the front end and integrated with a PHP/MySQL backend. Includes a fully functional form with validation, database storage, and automatic user feedback after submission.",
+      "technologies": "<1>Technologies :</1> React | CSS Modules | PHP | MySQL"
+    }
+  },
+
+  "skills": {
+    "title": "Skills",
+    "ferramentas": "Tools"
+  },
+
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I am a <1>Front-End Developer</1> transitioning into the tech field, building my career with a focus on functional, well-structured interfaces and strong user experience. My background in <2>Financial Management</2> and my current studies in <3>Internet Systems Technology</3> have given me a more practical and analytical approach to developing solutions.",
+    "paragraph2": "I work with <1>React, JavaScript, HTML, and CSS</1>, prioritizing clean code, responsiveness, and <2>API integration</2>. I also have knowledge of <3>PHP</3> and <4>MySQL</4>, which allows me to explore backend development as well.",
+    "paragraph3": "Throughout my studies, I have developed personal, <1>freelance</1>, and <2>volunteer</2> projects. These experiences strengthened my organization, autonomy, version control skills with <3>Git/GitHub</3>, and my sense of responsibility toward delivering high-quality work.",
+    "paragraph4": "I am consolidating my career in Front-End development (while also exploring backend technologies) and seeking opportunities where I can continue growing technically and create real impact through what I build."
+  },
+
+  "form": {
+    "title": "Contact",
+    "text": "Need a strong online presence? Let's talk!",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send"
+  },
+
+  "footer": {
+    "developedBy": "Developed by"
+  }
+}

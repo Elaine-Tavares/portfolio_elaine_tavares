@@ -1,0 +1,67 @@
+.about_session{
+   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);
+   padding-top: 150px;
+   min-height: 100vh;
+ 
+}
+
+.about_session_container{
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.12);
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+   width: 95%;
+   margin: 0 auto;
+   padding-top: 20px;
+   line-height: 25px;
+}
+
+.about_session_container img{
+   width: 60%;
+}
+
+.texto_apresentacao{
+   width: 100%;
+   padding: 1rem;
+   text-indent: 2rem;
+}
+
+.texto_apresentacao p{
+   text-align: justify;
+}
+
+
+.highlight {
+  /* color: #00ff88; verde bonito tech */
+  color: rgb(243, 124, 124);
+  font-weight: 600;
+}
+
+/****************************************************************************/
+/* Tablets */
+@media (min-width: 768px) {
+  .about_session_container img{
+    width: 35%;
+  }
+}
+
+/* Laptops pequenos */
+@media (min-width: 1024px) {
+   .about_session_container img{
+    width: 30%;
+   }
+
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+   .about_session_container img{
+    width: 25%;
+   }
+}
+
+/* Telas grandes */
+/* @media (min-width: 1536px) {
+  
+} */

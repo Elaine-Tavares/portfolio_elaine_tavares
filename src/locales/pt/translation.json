@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Portfólio Dev Front-End - Elaine Tavares"
+},
+
+  "navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "skills": "Tecnologias",
+    "about": "Sobre mim",
+    "contact": "Contato"
+  },
+
+  "hero": {
+    "greeting": "Olá! Eu sou",
+    "name": "Elaine Tavares.",
+    "title1": "Desenvolvedora",
+    "title2": "Front-End Jr."
+  },
+
+  "buttons": {
+    "cv": "Ver CV",
+    "cv2": "Baixar CV"
+  },
+  
+  "projects": {
+    "title": "Projetos",
+    "project1": {
+      "in_development": "Em Desenvolvimento...",
+      "name": "Cadastro e Login de Usuários",
+      "description": "<1>Descrição: </1>Sistema de cadastro e login de usuários com validação de formulários, autenticação segura, incluindo criptografia de senha, confirmação de cadastro por e-mail e funcionalidade de recuperação de senha. Rotas protegidas, integração entre front-end e back-end, simulando um fluxo real de autenticação.",
+      "technologies":"<1>Tecnologias: </1> React | CSS Modules | PHP | MySQL"
+    },
+    "project2": {
+      "in_development": "Em Desenvolvimento",
+      "name": "Portólio - Elaine TavaresWeb",
+      "description": "<1>Descrição: </1>Portfólio desenvolvido como SPA responsiva, com React no front-end e integração com backend em PHP/MySQL. Possui formulário funcional com validação, armazenamento em banco de dados e retorno automático de feedback ao usuário após envio.",
+      "technologies": "<1>Tecnologias :</1> React | CSS Modules | PHP | MySQL"
+    }
+  },
+
+   "skills": {
+    "title": "Skills",
+    "ferramentas": "Ferramentas"
+  },
+
+  "about": {
+    "title": "Sobre Mim",
+    "paragraph1": "Sou desenvolvedora <1>Front-End</1> em transição de carreira, construindo minha trajetória na tecnologia com foco em interfaces funcionais, bem estruturadas e com boa experiência para o usuário. Minha formação em <2>Gestão Financeira</2> e os estudos atuais em <3>Sistemas para Internet</3> me deram uma visão mais prática e analítica na hora de desenvolver soluções.",
+    "paragraph2": "Trabalho com <1>React, JavaScript, HTML e CSS</1>, priorizando código limpo, responsividade e integração com <2>APIs.</2> Também tenho conhecimentos em <3>PHP</3> e <4>MySQL,</4> o que me permite explorar o backend também.",
+    "paragraph3": "Ao longo dos estudos desenvolvi projetos próprios, <1>freelance</1> e <2>trabalho voluntário</2>, experiências que fortaleceram minha organização, autonomia, versionamento com <3>Git/GitHub</3> e senso de responsabilidade com a qualidade do que entrego.",
+    "paragraph4": "Estou consolidando minha carreira em desenvolvimento Front-End (com exploração do backend) e busco oportunidades onde eu possa evoluir tecnicamente e gerar impacto real com o que construo."
+  },
+
+  "form": {
+    "title": "Contato",
+    "text": "Precisa de uma presença online impactante? Vamos conversar!" ,
+    "name": "Sem nome",
+    "email": "Sem Email",
+    "message": "Sua mensagem",
+    "send": "Enviar"
+  },
+
+  "footer": {
+  "developedBy": "Desenvolvido por"
+}
+}

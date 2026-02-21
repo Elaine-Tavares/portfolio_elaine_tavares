@@ -1,0 +1,278 @@
+.nav{
+  background: rgba(15, 15, 15, 0.8);
+  position: fixed;
+  top:0;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  inset: 0;
+}
+
+/*box-shadow no bottom do nav*/
+.nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 6px;
+  box-shadow: 0px 8px 8px -2px red;
+  pointer-events: none;
+  margin: 0 auto;
+  margin-left: -25px;
+}
+
+.logo{
+  display: flex;
+  flex-flow: column;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.logo_container_capivara{
+  display: flex;
+  align-items: end;
+  gap: 5px;
+}
+
+.logo_container_capivara span{
+  text-shadow: 0 2px 8px #fff;
+}
+
+.logo img{
+  box-shadow: 8px 2px 10px 0px red;
+  border-radius: 50%;
+  width: 40px; 
+}
+
+.logo .tavares{
+  box-shadow: 0px 8px 8px -2px red;
+  padding-bottom: 5px;
+  border-radius: 10px; 
+  padding-left: 10px;
+  text-shadow: 0 2px 8px #fff;
+}
+
+.hamburger{
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-flow: column;
+  gap: 3px;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+  opacity: 0.9;
+}
+
+.hamburger span{
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/*animação para hamburguer*/
+.open span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);/*gira 45° desloca pra posição do X*/
+}
+
+.open span:nth-child(2){/*Some completamente.*/
+  opacity: 0;
+}
+
+.open span:nth-child(3){
+  transform: rotate(-45deg) translate(7px, -7px);/*gira -45° completa o X*/
+}
+
+.menu{
+  box-shadow: 0px 2px 10px -2px red;
+  position: fixed;
+  top: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #0f0f0f;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  padding: 6rem 1rem ;
+  gap: 5rem;
+  z-index: 1050;
+  right: -100%; /*esconde menu*/
+  transition: all 0.4s ease;
+}
+
+.show_menu{
+  right: 0; /*mostra menu*/
+}
+
+.menu a{
+  padding-bottom: 8px;
+  padding-left: 10px;
+  box-shadow: 0 4px 6px -4px transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-tap-highlight-color: transparent;/*tira fundo claro no clique*/
+  transition: all 0.3 ease;
+  text-decoration: none;
+  color: red;  
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+/*animação para links do menu*/
+.menu a {
+  border-bottom: 1px solid red; 
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.4s ease; 
+}
+
+.show_menu a:nth-child(1){
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.show_menu a:nth-child(2){
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.show_menu a:nth-child(3){
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.4s;  
+}
+
+.show_menu a:nth-child(4){
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.show_menu a:nth-child(5){
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.6s;  
+}
+
+.menu a{
+  text-decoration: none;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.menu a:active,
+.menu a:focus {
+  opacity: 1;
+  box-shadow: 0px 8px 8px -2px red;
+  text-shadow: 0 2px 8px red;
+}
+
+.languages{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.4s ease;
+}
+
+.show_menu .languages{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;  
+}
+
+.languages img{
+  width: 40px;
+  cursor: pointer;
+}
+
+.overlay{
+  background: #0f0f0f;
+  position: fixed;
+  inset: 0;/*O elemento “encosta” em todos os lados(cantos) do pai, nesse caso o nav*/
+  opacity: 0.5;
+  height: 100vh;
+}
+
+/********************************************************************************/
+
+/* Tablets */
+@media (min-width: 768px) {
+  .hamburger{
+    display: none;
+  }
+
+  .menu{
+    position: static;
+    right: 0;
+    flex-flow: row;
+    justify-content: end;
+    gap: 0rem;
+    padding: 0;
+    align-items: center;
+    box-shadow: none;    
+    height: 7rem;
+    background: transparent; 
+  }
+
+  .menu a{
+    text-align: center;
+    padding: 1px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s ease; 
+    border-bottom: 1px solid transparent;
+    margin-right: 25px;
+    font-size: 1rem;
+  }
+
+  .menu a:hover{ 
+    box-shadow: 0px 8px 8px -2px red;
+  } 
+
+  .languages{
+    opacity: 1;
+    transform: translateY(0px);
+    gap: 10px;
+  }
+
+  .languages img{
+    width: 30px;
+    cursor: pointer;
+  }
+}
+
+/* Laptops pequenos */
+@media (min-width: 1024px) {
+  .menu{
+    padding:0;
+    gap: 2.2rem;
+  }
+}
+
+/* Desktop */
+/* @media (min-width: 1280px) {
+   
+} */
+

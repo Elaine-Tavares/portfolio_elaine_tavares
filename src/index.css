@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --bg: #121212;
+  --text: #f1f5f9;
+  --primary: #38bdf8;
+}
+
+.light {
+  --bg: #f1f5f9;
+  --text: #121212;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    background-color: var(--bg);
+    color: var(--text);      
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Base Mobile: 320–767px*/
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.6rem; }
+p  { font-size: 1rem; }
+
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0rem;  
+}
+
+section{
+    padding: 2rem 0 5rem 0;   
+    box-shadow: 0 8px 12px -10px rgba(255, 0, 0, 0.4);
+    padding-inline: 1.5rem
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; }
+    p  { font-size: 1.05rem; }
+}
+
+/* Laptops pequenos */
+@media (min-width: 1024px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    p  { font-size: 1.1rem; }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    h1 { font-size: 3.4rem; }
+    h2 { font-size: 2.4rem; }
+    p  { font-size: 1.15rem; }
+}
+
+/* Telas grandes */
+@media (min-width: 1536px) {
+    h1 { font-size: 3.8rem; }
+    h2 { font-size: 2.6rem; }
+    p  { font-size: 1.2rem; }
+}
