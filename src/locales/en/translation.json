@@ -8,7 +8,8 @@
     "projects": "Projects",
     "skills": "Technologies",
     "about": "About me",
-    "contact": "Contact"
+    "contact": "Contact",
+    "theme": "Theme"
   },
 
   "hero": {
@@ -40,8 +41,8 @@
   },
 
   "skills": {
-    "title": "Skills",
-    "ferramentas": "Tools"
+    "title": "Technologies",
+    "tools": "Tools"
   },
 
   "about": {
@@ -58,7 +59,11 @@
     "name": "Your Name",
     "email": "Your Email",
     "message": "Your Message",
-    "send": "Send"
+    "send": "Send",
+    "empty_input": "Please fill in all fields.",
+    "invalid_email": "Invalid email format.",
+    "success": "We have received your message! We will get in touch with you soon 😊",
+    "axios_error": "Unable to connect to the server."
   },
 
   "footer": {

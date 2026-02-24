@@ -1,6 +1,6 @@
 .skills_session{
-    padding-top: 150px;
-    box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);
+   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);/*sombra no topo da sessão*/
+   padding-top: 150px;   
 }
 
 h3{
@@ -9,7 +9,6 @@ h3{
     margin-bottom: 30px;
     font-size: 1.4rem;
 }
-
 
 .skills_container {
   display: flex;
@@ -22,7 +21,7 @@ h3{
 .front,
 .back,
 .ferramentas{
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 15px var(--project_box_shadow);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; 
@@ -35,7 +34,7 @@ h3{
 .front:hover,
 .back:hover,
 .ferramentas:hover{
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+   box-shadow: 0 0 25px var(--project_box_shadow_hover)
 }
 
 .front span,
@@ -50,125 +49,103 @@ h3{
     border-radius: 50%;  
 }
 
-/* .front span:hover,
-.back span:hover,
-.ferramentas span:hover {
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;
-  
-} */
-
 .react{
     font-size: 40px;
-    color: #61DAFB;
+    color: #00B5E2;
     border-radius: 50%;
     transition: all 0.4s ease;  
 }
 
 .react:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
    
 }
 
 .js{
-    font-size: 40px;
-    color: #F7DF1E;
-    border-radius: 50%; 
-    transition: all 0.4s ease;    
+   font-size: 40px;
+   color: #D4B000;
+   border-radius: 50%; 
+   transition: all 0.4s ease;    
 }
 
 .js:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .css{
-    font-size: 40px;
-    color: #1572B6;
-    border-radius: 50%; 
-    transition: all 0.4s ease;  
+   font-size: 40px;
+   color: #2965F1;
+   border-radius: 50%; 
+   transition: all 0.4s ease;  
 }
 
 .css:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .html{
-    font-size: 40px;
-    color: #E34F26;
-    border-radius: 50%; 
-    transition: all 0.4s ease;  
+   font-size: 40px;
+   color: #E34F26;
+   border-radius: 50%; 
+   transition: all 0.4s ease;  
 }
 
 .html:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .php{
-    font-size: 50px;
-    color: #777BB4;
-    border-radius: 50%; 
-    transition: all 0.4s ease;  
+   font-size: 50px;
+   color: #4F5B93;
+   border-radius: 50%; 
+   transition: all 0.4s ease;  
 }
 
 .php:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .mysql{
-    font-size: 50px;
-    color: #00758F;
-    border-radius: 50%; 
-    transition: all 0.4s ease;  
+   font-size: 50px;
+   color: #00618A;
+   border-radius: 50%; 
+   transition: all 0.4s ease;  
 }
 
 .mysql:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .github{
-    font-size: 50px;
-    color: #FFFFFF;
-    opacity: 0.9;
-    border-radius: 50%; 
-    transition: all 0.4s ease; 
+   font-size: 50px;
+   color: var(--github_color);
+   opacity: 0.9;
+   border-radius: 50%; 
+   transition: all 0.4s ease; 
 }
 
 .github:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
 .vercel{
-    font-size: 50px;
-    color: #FFFFFF;
-    opacity: 0.9;
-    border-radius: 50%; 
-    transition: all 0.4s ease; 
+   font-size: 50px;
+   color: var(--github_color);
+   opacity: 0.9;
+   border-radius: 50%; 
+   transition: all 0.4s ease; 
 }
 
 .vercel:hover{
-  transform: translateY(-10px);
-  box-shadow: 4px 4px 14px 0px #fff;  
+   transform: translateY(-10px);
+   box-shadow: 4px 4px 14px 0px var(--project_box_shadow_hover);
 }
 
-/***** 768/
-/*.front span,
-.back span,
-.ferramentas span {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 30px;
-    background-color: transparent;
-    transition: all 0.4s ease;
-    border-radius: 50%;  
-    padding: 20px;  
-    width: 90px;
-}*/
 

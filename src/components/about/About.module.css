@@ -1,12 +1,11 @@
 .about_session{
-   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);
+   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);/*sombra no topo da sessão*/
    padding-top: 150px;
-   min-height: 100vh;
- 
+   min-height: 100vh; 
 }
 
 .about_session_container{
-   box-shadow: 0 0 15px rgba(255, 255, 255, 0.12);
+   box-shadow: 0 0 15px var(--project_box_shadow);
    display: flex;
    flex-flow: column;
    justify-content: center;
@@ -19,6 +18,8 @@
 
 .about_session_container img{
    width: 60%;
+   box-shadow: 0 0 15px var(--project_box_shadow);
+   border-radius: 18px;
 }
 
 .texto_apresentacao{
@@ -29,11 +30,11 @@
 
 .texto_apresentacao p{
    text-align: justify;
+   font-weight: 500;
+   color: var(--text);
 }
 
-
 .highlight {
-  /* color: #00ff88; verde bonito tech */
   color: rgb(243, 124, 124);
   font-weight: 600;
 }
@@ -42,22 +43,21 @@
 /* Tablets */
 @media (min-width: 768px) {
   .about_session_container img{
-    width: 35%;
+     width: 35%;
   }
 }
 
 /* Laptops pequenos */
 @media (min-width: 1024px) {
    .about_session_container img{
-    width: 30%;
+     width: 30%;
    }
-
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
    .about_session_container img{
-    width: 25%;
+     width: 25%;
    }
 }
 

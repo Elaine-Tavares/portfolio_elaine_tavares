@@ -1,5 +1,5 @@
 .nav{
-  background: rgba(15, 15, 15, 0.8);
+  background-color: var(--bg_header);
   position: fixed;
   top:0;
   height: 7rem;
@@ -79,7 +79,7 @@
 .hamburger span{
   height: 3px;
   width: 100%;
-  background: #fff;
+  background: var(--bg_hamburger_span);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -103,12 +103,12 @@
   top: 0;
   width: 70%;
   height: 100vh;
-  background-color: #0f0f0f;
+  background-color: var(--bg);
   list-style: none;
   display: flex;
   flex-flow: column;
+  gap: 4rem;
   padding: 6rem 1rem ;
-  gap: 5rem;
   z-index: 1050;
   right: -100%; /*esconde menu*/
   transition: all 0.4s ease;
@@ -127,19 +127,20 @@
   -webkit-tap-highlight-color: transparent;/*tira fundo claro no clique*/
   transition: all 0.3 ease;
   text-decoration: none;
-  color: red;  
+  color: red; 
   font-size: 1.2rem;
   font-weight: 500;
   opacity: 0.6;
   transition: all 0.2s ease;
 }
 
+
 /*animação para links do menu*/
 .menu a {
-  border-bottom: 1px solid red; 
+  border-bottom: 1px solid red;
   opacity: 0;
   transform: translateY(-30px);
-  transition: all 0.4s ease; 
+  transition: all 0.3s ease; 
 }
 
 .show_menu a:nth-child(1){
@@ -172,19 +173,27 @@
   transition-delay: 0.6s;  
 }
 
-.menu a{
+/* .menu a{
   text-decoration: none;
-  color: red;
+  color: var(--color_menu_a);
   font-size: 1.2rem;
   font-weight: 500;
   transition: all 0.3s;
-}
+} */
 
 .menu a:active,
-.menu a:focus {
+.menu a:focus,
+.menu a:hover {
   opacity: 1;
   box-shadow: 0px 8px 8px -2px red;
   text-shadow: 0 2px 8px red;
+}
+
+.nav_buttons{
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+  gap: 15px;
 }
 
 .languages{
@@ -204,7 +213,28 @@
 
 .languages img{
   width: 40px;
-  cursor: pointer;
+  cursor: pointer;   
+}
+
+.btn_theme{
+ background-color: transparent;
+ color:var(--btn_color);
+ border: 1px solid var(--btn_border);
+ margin-top: 10px;
+ padding: 6px 12px;
+ border-radius: 16px;
+ width: 60px;
+ cursor: pointer;
+ transition: all 0.4s ease;
+ display: flex;
+ justify-content: center;
+}
+
+.btn_theme:hover{
+    background-color: #fff;
+    color: black;
+    box-shadow: 4px 4px 14px 0px #fff;
+    text-shadow: 0 2px 8px black;
 }
 
 .overlay{
@@ -234,6 +264,7 @@
     box-shadow: none;    
     height: 7rem;
     background: transparent; 
+    width: 80%;
   }
 
   .menu a{
@@ -250,6 +281,10 @@
   .menu a:hover{ 
     box-shadow: 0px 8px 8px -2px red;
   } 
+
+  .nav_buttons{
+    gap: 0px;
+  }
 
   .languages{
     opacity: 1;

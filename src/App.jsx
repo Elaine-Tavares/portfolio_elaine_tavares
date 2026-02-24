@@ -10,30 +10,38 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 
-
 function App() {
   const [loading, setLoading] = useState(true);
 
-   const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const [theme, setTheme] = useState(() => {
+  return localStorage.getItem("theme") || "dark";
+});
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     document.title = t("meta.title");
   }, [i18n.language]);
 
   
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 1000); // tempo do spinner
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // tempo do spinner
+
+    return () => clearTimeout(timer);
+  }, []);
   
-      return () => clearTimeout(timer);
-    }, []);
-  
-    if (loading) return <Spinner />;
+  if (loading) return <Spinner />;
 
   return (
     <>
-      <Header/>
+      <Header theme={() => setTheme(theme === "dark" ? "light" : "dark")}/>
       <main className="container">
         <Main/>
         <Projects/>

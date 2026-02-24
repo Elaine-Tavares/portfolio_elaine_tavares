@@ -9,18 +9,6 @@
     animation: fadeIn 3s ease ;            
 }
 
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes fadeIn {
   /*No início 0%: o elemento está totalmente transparente*/
   0% {
@@ -42,11 +30,11 @@
 }
 
 .text{
-  display: flex;
-  flex-flow: column;
-  justify-content: start;
-  align-items: start;
-  gap: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0;
 }
 
 .container_div_h3{
@@ -95,11 +83,14 @@
 
 .github{
     font-size: 2.5rem;
-    color: #C9D1D9;
+    color: var(--github_color);
+    border-radius: 50%;
     transition: all 0.4s ease;
 }
+
 .github:hover{
-    box-shadow: 4px 4px 14px 0px #C9D1D9;
+    box-shadow: 4px 4px 14px 0px var(--github_color);
+    border-radius: 50%;
 }
 
 .whats{
@@ -122,17 +113,17 @@
 }
 
 .button{
-    color:#fff;
+    color:var(--btn_color);
+    border: 1px solid var(--btn_border);
+    background-color: transparent;
     font-weight: bold;
     font-size: 0.8rem;
-    border: 2px solid #fff;
     padding: 10px 20px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    border: 1px solid #fff;
     transition: all 0.4s ease;
     width: 140px;
 }
@@ -162,7 +153,7 @@
 }
 
 .main_session_img img{
-  box-shadow: 4px 4px 14px 0px #fff;
+  box-shadow: 4px 4px 14px 0px var(--img_main_box_shadow);
   width: 50%;
   border-radius: 50%;  
 }

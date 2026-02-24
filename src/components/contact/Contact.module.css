@@ -1,5 +1,5 @@
 .session_contact{
-   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);
+   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);/*sombra no topo da sessão*/
    padding-top: 150px;
    display: flex;
    flex-direction: column;
@@ -42,15 +42,19 @@ form {
 
 input,
 textarea {
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid var(--input_border);
+  background: var(--input_bg);
+  color: var(--text);
   width: 100%;
   padding: 14px 16px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
   font-size: 1rem;
   outline: none;
   transition: 0.3s ease;
+}
+
+textarea {
+  resize: none;
 }
 
 /* Focus elegante */
@@ -61,13 +65,13 @@ textarea:focus {
 }
 
 input::placeholder{
-  color: rgba(255,255,255,0.5);
-   font-size: 1rem;
+  color: var(--placeholder_color);
+  font-size: 1rem;
 }
 
 
 textarea::placeholder {
-  color: rgba(255,255,255,0.5);
+color: var(--placeholder_color);
    font-size: 1.2rem;
 }
 
@@ -76,7 +80,7 @@ textarea::placeholder {
   padding: 14px;
   border-radius: 14px;
   border: none;
-  color: #fff;
+  color: var(--btn_color);
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -87,7 +91,7 @@ textarea::placeholder {
   transform: translateY(-2px);
 }
 
-.btn_form:active {
+.btn_form:active { /*:active é aplicado enquanto o botão está sendo pressionado*/
   transform: scale(0.98);
 }
 

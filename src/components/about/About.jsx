@@ -1,21 +1,20 @@
 import avatar from './../../assets/images/avatar_vermelho.webp'
 import { Trans, useTranslation } from "react-i18next";
+
 import styles from './About.module.css'
 
 export default function About() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); //t() → Tradução para textos simples (string pura)
 
   return (
      <section id='about' className={styles.about_session}>
       <h2>{t("about.title")}</h2>
-
       <div className={styles.about_session_container}>
         <img src={avatar} alt="Avatar Elaine" />
-
         <div className={styles.texto_apresentacao}>
-
           <p>
-            <Trans
+            {/*<Trans /> → Tradução para textos com HTML ou componentes React */}
+            <Trans 
               i18nKey="about.paragraph1"
               components={{
                 1: <strong className={styles.highlight}  />,
@@ -23,8 +22,8 @@ export default function About() {
                 3: <strong className={styles.highlight} />
               }}
             />
-          </p><br />
-
+          </p>
+          <br />
           <p>
             <Trans
               i18nKey="about.paragraph2"
@@ -35,8 +34,8 @@ export default function About() {
                 4: <strong className={styles.highlight} />
               }}
             />
-          </p> <br />
-
+          </p>
+          <br />
           <p>
             <Trans
               i18nKey="about.paragraph3"
@@ -47,12 +46,10 @@ export default function About() {
               }}
             />
           </p>
-
+          <br />
           <p>
-            <Trans
-              i18nKey="about.paragraph4" />
+            {t("about.paragraph4")}
           </p>
-
         </div>
       </div>
     </section>

@@ -1,9 +1,9 @@
 .footer {
+  box-shadow: 0 -4px 14px 0px rgba(167, 3, 3, 0.651);
   width: 100%;
-  background: rgba(15, 15, 15, 0.8);
-  backdrop-filter: blur(10px);
+  background: transparent;
   padding-bottom: 10px;
-  box-shadow: 0 -8px 12px -10px red;
+  position: relative;
 }
 
 .container {
@@ -56,11 +56,12 @@
 
 .github{
     font-size: 2.5rem;
-    color: #C9D1D9;
+    color: var(--github_color);
     transition: all 0.4s ease;
+    border-radius: 50%;
 }
 .github:hover{
-    box-shadow: 4px 4px 14px 0px #C9D1D9;
+    box-shadow: 4px 4px 14px 0px var(--github_color);
     transform: translateY(-7px);
 }
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import api from "../../../services/api";
 import { Trans, useTranslation } from "react-i18next";
+
 import styles from "./Contact.module.css"
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); //t() → Tradução para textos simples (string pura)
   const[name, setName] = useState("")
   const[email, setEmail] = useState("")
   const[message, setMessage] = useState("")
@@ -28,7 +29,7 @@ export default function Contact() {
         
         if (response.data.success) { 
           //exibe a mensagem de sucesso
-          setMsgSuccess(response.data.message)
+          setMsgSuccess(t("form.success"))
 
           //limpa os campos
           setName("")
@@ -41,9 +42,19 @@ export default function Contact() {
           }, 3000);
           return;
         
-        } else {
+        } else if (response.data.empty_input) {
            //exibe a mensagem de erro
-          setMsgError(response.data.message)
+          setMsgError(t("form.empty_input"))
+
+          // apaga a mensagem de erro após 3s
+          setTimeout(() => {
+          setMsgError("") 
+        }, 3000);
+          return;
+
+      } else if (response.data.invalid_email){
+         //exibe a mensagem de erro
+          setMsgError(t("form.invalid_email"))
 
           // apaga a mensagem de erro após 3s
           setTimeout(() => {
@@ -53,8 +64,9 @@ export default function Contact() {
       }
      
     } catch (error) {
-      console.log("ERRO DE CONEXÃO", error.response?.data);
-      setMsgError("Erro ao conectar com o servidor.");
+      // console.log("ERRO DE CONEXÃO", error.response?.data);
+       {/*<Trans /> → Tradução para textos com HTML ou componentes React */}
+      setMsgError(t("form.axios_error"));
 
       // apaga a mensagem de erro após 3s
       setTimeout(() => {
@@ -66,8 +78,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.session_contact}>
-      <h2><Trans i18nKey="form.title"/></h2>
-      <h3><Trans i18nKey="form.text"/></h3>
+      <h2>{t("form.title")}</h2>
+      <h3>{t("form.text")}</h3>
       <form onSubmit={handleSubmit}>
         <div className={styles.msgs_to_user}>
           {msgSuccess && <p className={`${styles.success} animate__animated animate__rubberBand`}>{msgSuccess}</p>}

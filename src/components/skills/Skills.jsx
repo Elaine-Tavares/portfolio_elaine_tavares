@@ -8,16 +8,14 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { Trans, useTranslation } from "react-i18next";
 
-
 import styles from './Skills.module.css'
 
-
-
 export default function Skills() {
-  const { t } = useTranslation();
+  const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
+
   return (
     <section id='skills' className={styles.skills_session}>
-        <h2>Skills</h2>
+        <h2>{t("skills.title")}</h2>
         <div className={styles.skills_container}>
 
             <div className={styles.front}>
@@ -35,7 +33,7 @@ export default function Skills() {
             </div>
 
             <div className={styles.ferramentas}>
-               <h3><Trans i18nKey="skills.ferramentas"/></h3>
+               <h3>{t("skills.tools")}</h3>
                 <span><FaGithub className={styles.github}/>GitHub</span>
                 <span><IoLogoVercel className={styles.vercel}/>Vercel</span>
             </div>            

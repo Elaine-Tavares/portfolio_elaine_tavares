@@ -8,7 +8,8 @@
     "projects": "Projetos",
     "skills": "Tecnologias",
     "about": "Sobre mim",
-    "contact": "Contato"
+    "contact": "Contato",
+    "theme": "Tema"
   },
 
   "hero": {
@@ -40,8 +41,8 @@
   },
 
    "skills": {
-    "title": "Skills",
-    "ferramentas": "Ferramentas"
+    "title": "Tecnologias",
+    "tools": "Ferramentas"
   },
 
   "about": {
@@ -55,10 +56,14 @@
   "form": {
     "title": "Contato",
     "text": "Precisa de uma presença online impactante? Vamos conversar!" ,
-    "name": "Sem nome",
-    "email": "Sem Email",
+    "name": "Seu nome",
+    "email": "Seu Email",
     "message": "Sua mensagem",
-    "send": "Enviar"
+    "send": "Enviar",
+    "empty_input": "Por favor, preencha todos os campos.",
+    "invalid_email": "Formato de e-mail inválido.",
+    "success": "Recebemos sua mensagem! Em breve entraremos em contato 😊",
+    "axios_error": "Erro ao conectar com o servidor."
   },
 
   "footer": {

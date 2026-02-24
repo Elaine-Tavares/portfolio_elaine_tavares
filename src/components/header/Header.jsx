@@ -1,24 +1,21 @@
 import { useState, useEffect } from 'react';
-import { Trans, useTranslation } from "react-i18next";
-
 import i18n from "i18next";
+import { Trans, useTranslation } from "react-i18next";
 import './../../i18n' 
-
-
 
 import styles from './Header.module.css';
 
-export default function Header() {
+export default function Header({theme}) {
   /*Lógica no menu mobile:
   - function toggleMenu alterna o estado do menu;
   - function closeMenu sempre seta o estado para menuOpen = false;
   - de acordo com a alteração do estado o estilo é controlado dando o comportamento de menu fechado(rigth: -100%) ou aberto(rigth: 0%).
   */
-  const { t } = useTranslation();
+  const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
 
-  function LanguageSwitcher() {
-  const { i18n } = useTranslation();
-}
+//   function LanguageSwitcher() {
+//     const { i18n } = useTranslation();
+// }
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -53,7 +50,8 @@ export default function Header() {
           ${menuOpen ? styles.open : ""}`}
           onClick={toggleMenu}
         >
-          <span></span>
+          {/*spans para animação do hamburger*/}
+          <span></span> 
           <span></span>
           <span></span>
         </button>
@@ -63,10 +61,13 @@ export default function Header() {
           <a href="#skills" onClick={closeMenu}><Trans i18nKey="navbar.skills"/></a> 
           <a href="#about" onClick={closeMenu}><Trans i18nKey="navbar.about"/></a> 
           <a href="#contact" onClick={closeMenu}><Trans i18nKey="navbar.contact"/></a>   
-          <div className={styles.languages} onClick={closeMenu}>
-            <img onClick={() => i18n.changeLanguage("pt")} src="/flag_brazil.webp" alt="Bandeira do Brasil" />
-            <img onClick={() => i18n.changeLanguage("en")} src="/flag_usa.webp" alt="Bandeira dos USA" />
-          </div>
+          <div className={styles.nav_buttons}>
+            <div className={styles.languages} onClick={closeMenu}>
+              <img onClick={() => i18n.changeLanguage("pt")} src="/flag_brazil.webp" alt="Bandeira do Brasil" />
+              <img onClick={() => i18n.changeLanguage("en")} src="/flag_usa.webp" alt="Bandeira dos USA" />       
+            </div>
+              <button className={styles.btn_theme} onClick={theme}>{t("navbar.theme")}</button>  
+          </div> 
         </ul>
         {/*overlay só aparece quando o menu estiver aberto*/}
         {menuOpen && (

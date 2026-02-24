@@ -1,9 +1,9 @@
 .projects_session{
+   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4); /*sombra no topo da sessão*/
    display: flex;
    flex-flow: column;
    width: 100%;
-   padding-top: 150px;
-   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4);
+   padding-top: 150px;    
 }
 
 h2{
@@ -18,7 +18,7 @@ h2{
   align-items: center;
   justify-content: center;
   gap: 50px;
-    align-items: stretch; /* 👈 isso resolve */
+  align-items: stretch; /* Os elementos filhos vão aumentar de altura automaticamente para ocupar todo o container (se o flex for em linha). */
 }
 
 .project{
@@ -29,15 +29,15 @@ h2{
   justify-content: center;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px var(--project_box_shadow);
   border-radius: 18px;
   padding-block: 15px;
-  transition: all 0.3s ease; 
   position: relative;
+  transition: all 0.3s ease; 
 }
 
 .project:hover {
-  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 14px 40px var(--project_box_shadow_hover);
   transform: translateY(-4px);
 }
 
@@ -48,8 +48,8 @@ h2{
 
 .project img{
   width: 90%;
-  object-fit: contain;
   height: 200px;
+  object-fit: contain; 
 }
 
 .project p{
@@ -68,7 +68,6 @@ h2{
 .project .tecnologias{
   margin-bottom: 15px;  
 }
-
 
 .lista{
   list-style: none;
@@ -93,13 +92,12 @@ h2{
 }
 
 .buttons a{
-    color:#fff;
+    color:var(--btn_color);
     font-weight: bold;
     font-size: 0.8rem;
-    border: 2px solid #fff;
+    border: 1px solid var(--btn_border);
     padding: 10px 20px;
     border-radius: 16px;
-    border: 1px solid #fff;
     width: 140px;
     text-align: center;
     text-decoration: none;
@@ -144,7 +142,6 @@ h2{
 }
 
 .highlight {
-  /* color: #00ff88; verde bonito tech */
   color: rgb(243, 124, 124);
   font-weight: 600;
 }
@@ -153,31 +150,29 @@ h2{
 /* Tablets */
 @media (min-width: 768px) {
  .project{
-  width: 45%;
- }
-
-
+   width: 45%;
+  }
 }
 
 /* Laptops pequenos */
 @media (min-width: 1024px) {
-  .projects_container{  
-   gap: 5px;
-}
- .project{
-   width: 33%;
- }
+   .projects_container{  
+     gap: 5px;
+   }
+
+  .project{
+    width: 33%;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
   .project{
-  margin-bottom: 30px;
-}
-   
+    margin-bottom: 30px;
+  }   
 }
 
-/* Telas grandes */
+/* Telas grandes
 @media (min-width: 1536px) {
   
-}
+} */
