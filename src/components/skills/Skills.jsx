@@ -6,7 +6,7 @@ import { SiPhp } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import styles from './Skills.module.css'
 
@@ -15,9 +15,12 @@ export default function Skills() {
 
   return (
     <section id='skills' className={styles.skills_session}>
-        <h2>{t("skills.title")}</h2>
-        <div className={styles.skills_container}>
 
+         {/* Título traduzido*/}
+        <h2>{t("skills.title")}</h2>
+
+        {/* Container das skills */}
+        <div className={styles.skills_container}>
             <div className={styles.front}>
                 <h3>Front-End</h3>
                 <span><TbBrandReact className={styles.react}/> React</span>

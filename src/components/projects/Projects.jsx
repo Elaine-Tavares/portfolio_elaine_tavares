@@ -7,6 +7,8 @@ import styles from './Projects.module.css'
 export default function Projects() {
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
 
+  // Lista de projetos
+  // Facilita adicionar novos projetos no futuro
   const listaProjetos = [
     { 
       imagem: `${cadastro_login_usuarios}`,  
@@ -29,26 +31,40 @@ export default function Projects() {
 
   return (
     <section id='projects' className={styles.projects_session}>
+
+        {/*Título traduzido*/}
         <h2><h4>{t("projects.title")}</h4></h2>
+
+        {/* Container dos projetos */}
         <div className={styles.projects_container}>
           {listaProjetos.map((projeto, index) =>(
+
+           //Card do projeto 
            <div className={styles.project} key={index}>
-             {projeto.em_desenvolvimento  && <div className={styles.em_desenvolvimento}>{t(projeto.em_desenvolvimento)}</div>}     
+             {projeto.em_desenvolvimento  && <div className={styles.em_desenvolvimento}>{t(projeto.em_desenvolvimento)}</div>} 
+
+             {/*Nome do projeto traduzido */}    
              <h4>{t(projeto.nameKey)}</h4>
+
              <img src={projeto.imagem} alt="Imagem do projeto" />
-             {/*<Trans /> → Tradução para textos com HTML ou componentes React */}
+
+             {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavra em negrito */}
              <p className={styles.descricao}><Trans 
                            i18nKey={t(projeto.descKey)}
                            components={{
                              1: <strong className={styles.highlight}  />,
                            }}
                          /></p>
+
+              {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavras em negrito */}
              <p className={styles.tecnologias}><Trans
                            i18nKey={t(projeto.tecnologias)}
                            components={{
                              1: <strong className={styles.highlight}  />,
                            }}
                          /></p> 
+                         
+            {/*Botões do projeto */}            
             <div className={styles.buttons}>
               <a href={projeto.deploy} target='_blank' rel="noopener noreferrer">Deploy</a>
               <a href={projeto.github} target='_blank' rel="noopener noreferrer">GitHub</a>

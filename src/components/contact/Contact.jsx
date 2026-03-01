@@ -6,16 +6,22 @@ import styles from "./Contact.module.css"
 
 export default function Contact() {
   const { t } = useTranslation(); //t() → Tradução para textos simples (string pura)
+
+  //Estados dos inputs
   const[name, setName] = useState("")
   const[email, setEmail] = useState("")
   const[message, setMessage] = useState("")
+
+  //Estados das mensagens ao usuário
   const[msgSuccess, setMsgSuccess] = useState('');
   const[msgError, setMsgError] = useState('');
 
+  //Função para enviar o formulário
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault();//Evita reload da página
     // console.log(`Nome: ${name}, Email: ${email}, Mensage: ${message}`);  
     try {
+       //Requisição POST para API
        const response = await api.post('/form.php', {
           name,
           email,
@@ -27,11 +33,13 @@ export default function Contact() {
        }}*/
        );
         
+        //Se sucesso no envio
         if (response.data.success) { 
+
           //exibe a mensagem de sucesso
           setMsgSuccess(t("form.success"))
 
-          //limpa os campos
+          //limpa os inputs
           setName("")
           setEmail("")
           setMessage("")
@@ -42,7 +50,9 @@ export default function Contact() {
           }, 3000);
           return;
         
+          //se inputs vazios
         } else if (response.data.empty_input) {
+
            //exibe a mensagem de erro
           setMsgError(t("form.empty_input"))
 
@@ -52,7 +62,9 @@ export default function Contact() {
         }, 3000);
           return;
 
+        //se e-mail inválido
       } else if (response.data.invalid_email){
+
          //exibe a mensagem de erro
           setMsgError(t("form.invalid_email"))
 
@@ -63,9 +75,11 @@ export default function Contact() {
           return;
       }
      
+      //erro de conexão com a API
     } catch (error) {
+      
       // console.log("ERRO DE CONEXÃO", error.response?.data);
-       {/*<Trans /> → Tradução para textos com HTML ou componentes React */}
+      {/* Erro traduzido */}
       setMsgError(t("form.axios_error"));
 
       // apaga a mensagem de erro após 3s
@@ -78,14 +92,22 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.session_contact}>
+      
+      {/* Título traduzido */}
       <h2>{t("form.title")}</h2>
+
+      {/* Subtítulo traduzido */}
       <h3>{t("form.text")}</h3>
       <form onSubmit={handleSubmit}>
+
+        {/* Mensagens ao usuário */}
         <div className={styles.msgs_to_user}>
           {msgSuccess && <p className={`${styles.success} animate__animated animate__rubberBand`}>{msgSuccess}</p>}
               
           {msgError && <p className={`${styles.error} animate__animated animate__rubberBand`}>{msgError}</p>}
         </div>
+
+        {/* Campo nome */}
         <input
           type="text"
           name="nome"
@@ -94,6 +116,7 @@ export default function Contact() {
           onChange={(e)=> setName(e.target.value)}   
         />
 
+        {/* Campo email */}
         <input
           type="text"
           name="email"
@@ -102,6 +125,7 @@ export default function Contact() {
           onChange={(e)=> setEmail(e.target.value)}
         />
 
+        {/* Campo mensagem */}
         <textarea
           name="mensagem"
           placeholder={t("form.message")}
@@ -109,7 +133,15 @@ export default function Contact() {
           value={message}
           onChange={(e)=> setMessage(e.target.value)} 
         />
-        <button type="submit" className={styles.btn_form}><Trans i18nKey="form.send"/></button>
+
+        {/* Botão enviar */}
+        <button 
+          type="submit" 
+          className={styles.btn_form}>
+            
+          {/* Texto do botão traduzido */}
+          {t("form.send")} 
+        </button>
       </form>
     </section>
   );

@@ -17,17 +17,20 @@ export default function Header({theme}) {
 //     const { i18n } = useTranslation();
 // }
 
+  // Estado do menu mobile (aberto/fechado)
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Função que alterna o menu mobile
   function toggleMenu(){
     setMenuOpen(!menuOpen)
   }
 
+  // Função que fecha o menu
   function closeMenu(e){
     setMenuOpen(false)
   }
 
-  //trava scroll quando o menu estiver aberto
+  // trava scroll quando o menu estiver aberto
   useEffect(() => {
     if(menuOpen){
       document.body.style.overflow = "hidden";
@@ -45,6 +48,8 @@ export default function Header({theme}) {
           </div>
           <span className={styles.tavares}>TavaresWeb</span>
         </div>
+
+        {/* Botão hamburger (mobile) */}
         <button 
           className={`${styles.hamburger} 
           ${menuOpen ? styles.open : ""}`}
@@ -55,20 +60,31 @@ export default function Header({theme}) {
           <span></span>
           <span></span>
         </button>
-        <ul className={`${styles.menu} ${menuOpen ? styles.show_menu : ""}`}>    
+
+        {/* Menu */}
+        <ul className={`${styles.menu} ${menuOpen ? styles.show_menu : ""}`}>
+
+          {/* Links do menu */}    
           <a href="#main" onClick={closeMenu}><Trans i18nKey="navbar.home"/></a>  
           <a href="#projects" onClick={closeMenu}><Trans i18nKey="navbar.projects"/></a>  
           <a href="#skills" onClick={closeMenu}><Trans i18nKey="navbar.skills"/></a> 
           <a href="#about" onClick={closeMenu}><Trans i18nKey="navbar.about"/></a> 
           <a href="#contact" onClick={closeMenu}><Trans i18nKey="navbar.contact"/></a>   
+
+          {/* Botões extras */}
           <div className={styles.nav_buttons}>
+
+            {/* Troca de idioma */}
             <div className={styles.languages} onClick={closeMenu}>
               <img onClick={() => i18n.changeLanguage("pt")} src="/flag_brazil.webp" alt="Bandeira do Brasil" />
               <img onClick={() => i18n.changeLanguage("en")} src="/flag_usa.webp" alt="Bandeira dos USA" />       
             </div>
-              <button className={styles.btn_theme} onClick={theme}>{t("navbar.theme")}</button>  
+
+            {/* Botão de tema */}
+            <button className={styles.btn_theme} onClick={theme}>{t("navbar.theme")}</button>  
           </div> 
         </ul>
+        
         {/*overlay só aparece quando o menu estiver aberto*/}
         {menuOpen && (
           <div 

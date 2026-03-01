@@ -8,15 +8,18 @@ export default function About() {
 
   return (
      <section id='about' className={styles.about_session}>
+      
+      {/* Título traduzido */}
       <h2>{t("about.title")}</h2>
+         
       <div className={styles.about_session_container}>
         <img src={avatar} alt="Avatar Elaine" />
         <div className={styles.texto_apresentacao}>
           <p>
-            {/*<Trans /> → Tradução para textos com HTML ou componentes React */}
+            {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavras em negrito */}
             <Trans 
               i18nKey="about.paragraph1"
-              components={{
+              components={{  
                 1: <strong className={styles.highlight}  />,
                 2: <strong className={styles.highlight} />,
                 3: <strong className={styles.highlight} />
@@ -25,6 +28,7 @@ export default function About() {
           </p>
           <br />
           <p>
+            {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavras em negrito */}
             <Trans
               i18nKey="about.paragraph2"
               components={{
@@ -37,6 +41,7 @@ export default function About() {
           </p>
           <br />
           <p>
+            {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavras em negrito */}
             <Trans
               i18nKey="about.paragraph3"
               components={{
@@ -48,6 +53,7 @@ export default function About() {
           </p>
           <br />
           <p>
+             {/* Parágrafo traduzido */}
             {t("about.paragraph4")}
           </p>
         </div>
