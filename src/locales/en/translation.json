@@ -33,11 +33,17 @@
       "technologies": "<1>Technologies: </1> React | CSS Modules | PHP | MySQL"
     },
     "project2": {
-      "in_development": "In Development",
+      "in_development": "Completed",
       "name": "Elaine TavaresWeb' Portfolio",
       "description": "<1>Description: </1> Responsive SPA portfolio built with React on the front end and integrated with a PHP/MySQL backend. Includes a fully functional form with validation, database storage, and automatic user feedback after submission.",
       "technologies": "<1>Technologies :</1> React | CSS Modules | PHP | MySQL"
-    }
+    },
+   "project3": {
+      "in_development": "Completed",
+      "name": "Multistep Form",
+      "description": "<1>Description: </1> A responsive Single Page Application built with React that implements a multistep form with component-based architecture, form validation, and interactive user feedback.",
+      "technologies": "<1>Technologies :</1> React | CSS Modules"
+   }
   },
 
   "skills": {

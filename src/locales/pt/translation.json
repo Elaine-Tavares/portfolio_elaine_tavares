@@ -33,11 +33,18 @@
       "technologies":"<1>Tecnologias: </1> React | CSS Modules | PHP | MySQL"
     },
     "project2": {
-      "in_development": "Em Desenvolvimento",
+      "in_development": "Concluído",
       "name": "Portólio - Elaine TavaresWeb",
       "description": "<1>Descrição: </1>Portfólio desenvolvido como SPA responsiva, com React no front-end e integração com backend em PHP/MySQL. Possui formulário funcional com validação, armazenamento em banco de dados e retorno automático de feedback ao usuário após envio.",
       "technologies": "<1>Tecnologias :</1> React | CSS Modules | PHP | MySQL"
-    }
+    },
+
+    "project3": {
+      "in_development": "Concluído",
+      "name": "Multistep Form",
+      "description": "<1>Descrição: </1> Aplicação Single Page responsiva desenvolvida com React que implementa um formulário multietapas com arquitetura baseada em componentes, validação de dados e feedback interativo ao usuário.",
+      "technologies": "<1>Tecnologias :</1> React | CSS Modules"
+}
   },
 
    "skills": {

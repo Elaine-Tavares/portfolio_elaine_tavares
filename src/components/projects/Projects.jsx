@@ -1,5 +1,7 @@
 import portfolio from './../../assets/images/projeto_portfolio.webp'
 import cadastro_login_usuarios from './../../assets/images/projeto_cadastro_login_usuarios.webp'
+import multistepform from './../../assets/images/projeto_multistepform.webp'
+
 import { Trans, useTranslation } from "react-i18next";
 
 import styles from './Projects.module.css'
@@ -12,13 +14,23 @@ export default function Projects() {
   const listaProjetos = [
     { 
       imagem: `${cadastro_login_usuarios}`,  
-      em_desenvolvimento: "projects.project1.in_development",
+      in_development: "projects.project1.in_development",
       nameKey: "projects.project1.name",
       descKey: "projects.project1.description",
       tecnologias: "projects.project1.technologies",
       deploy: '',
       github: '',
       },
+
+      {
+      imagem: `${multistepform}`,
+      nameKey: "projects.project3.name",
+      descKey: "projects.project3.description",
+      tecnologias: "projects.project3.technologies",
+      deploy: 'https://formulariomultistep-omega.vercel.app/',
+      github: 'https://github.com/Elaine-Tavares/formulario_multistep.git',
+      },
+
     {
       imagem: `${portfolio}`,
       nameKey: "projects.project2.name",
@@ -41,7 +53,7 @@ export default function Projects() {
 
            //Card do projeto 
            <div className={styles.project} key={index}>
-             {projeto.em_desenvolvimento  && <div className={styles.em_desenvolvimento}>{t(projeto.em_desenvolvimento)}</div>} 
+             {projeto.in_development && <div className={styles.em_desenvolvimento}>{t(projeto.in_development)}</div>} 
 
              {/*Nome do projeto traduzido */}    
              <h4>{t(projeto.nameKey)}</h4>
