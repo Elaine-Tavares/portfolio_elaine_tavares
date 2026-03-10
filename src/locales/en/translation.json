@@ -28,9 +28,9 @@
     "title": "Projects",
     "project1": {
       "in_development": "In Development...",
-      "name": "User Registration and Login System",
-      "description": "<1>Description: </1>User registration and login system with form validation and secure authentication, including password encryption, email confirmation, and password recovery functionality. Protected routes and full front-end and back-end integration, simulating a real-world authentication flow.",
-      "technologies": "<1>Technologies: </1> React | CSS Modules | PHP | MySQL"
+      "name": "RunPlanner",
+      "description": "<1>Description: </1>Web application for runners to create and manage personalized training plans. Includes user registration and login, demo access, workout planning with metrics such as pace and heart rate, progress tracking, and data visualization through performance charts.",
+      "technologies": "<1>Technologies: </1> React | CSS Modules | PHP | REST API | MySQL"
     },
     "project2": {
       "in_development": "Completed",

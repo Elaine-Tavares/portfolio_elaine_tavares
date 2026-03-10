@@ -28,9 +28,9 @@
     "title": "Projetos",
     "project1": {
       "in_development": "Em Desenvolvimento...",
-      "name": "Cadastro e Login de Usuários",
-      "description": "<1>Descrição: </1>Sistema de cadastro e login de usuários com validação de formulários, autenticação segura, incluindo criptografia de senha, confirmação de cadastro por e-mail e funcionalidade de recuperação de senha. Rotas protegidas, integração entre front-end e back-end, simulando um fluxo real de autenticação.",
-      "technologies":"<1>Tecnologias: </1> React | CSS Modules | PHP | MySQL"
+      "name": "RunPlanner",
+      "description": "<1>Descrição: </1>Aplicação web para corredores criarem e gerenciarem planos de treino personalizados. Inclui cadastro e login de usuários, acesso demo, planejamento de treinos com métricas como pace e frequência cardíaca, acompanhamento de evolução e visualização de dados por meio de gráficos de desempenho.",
+      "technologies":"<1>Tecnologias: </1> React | CSS Modules | PHP | REST API | MySQL"
     },
     "project2": {
       "in_development": "Concluído",
@@ -41,7 +41,7 @@
 
     "project3": {
       "in_development": "Concluído",
-      "name": "Multistep Form",
+      "name": "Formulário Multietapas",
       "description": "<1>Descrição: </1> Aplicação Single Page responsiva desenvolvida com React que implementa um formulário multietapas com arquitetura baseada em componentes, validação de dados e feedback interativo ao usuário.",
       "technologies": "<1>Tecnologias :</1> React | CSS Modules"
 }

@@ -1,5 +1,5 @@
 import portfolio from './../../assets/images/projeto_portfolio.webp'
-import cadastro_login_usuarios from './../../assets/images/projeto_cadastro_login_usuarios.webp'
+import runplanner from './../../assets/images/projeto_runplanner.webp'
 import multistepform from './../../assets/images/projeto_multistepform.webp'
 
 import { Trans, useTranslation } from "react-i18next";
@@ -13,13 +13,13 @@ export default function Projects() {
   // Facilita adicionar novos projetos no futuro
   const listaProjetos = [
     { 
-      imagem: `${cadastro_login_usuarios}`,  
+      imagem: `${runplanner}`,  
       in_development: "projects.project1.in_development",
       nameKey: "projects.project1.name",
       descKey: "projects.project1.description",
       tecnologias: "projects.project1.technologies",
-      deploy: '',
-      github: '',
+      deploy: 'https://run-planner-theta.vercel.app/',
+      github: 'https://github.com/Elaine-Tavares/run_planner.git',
       },
 
       {
