@@ -65,11 +65,11 @@ export default function Header({theme}) {
         <ul className={`${styles.menu} ${menuOpen ? styles.show_menu : ""}`}>
 
           {/* Links do menu */}    
-          <a href="#main" onClick={closeMenu}><Trans i18nKey="navbar.home"/></a>  
-          <a href="#projects" onClick={closeMenu}><Trans i18nKey="navbar.projects"/></a>  
-          <a href="#skills" onClick={closeMenu}><Trans i18nKey="navbar.skills"/></a> 
-          <a href="#about" onClick={closeMenu}><Trans i18nKey="navbar.about"/></a> 
-          <a href="#contact" onClick={closeMenu}><Trans i18nKey="navbar.contact"/></a>   
+          <a href="#main" onClick={closeMenu}>{t("navbar.home")}</a>  
+          <a href="#projects" onClick={closeMenu}>{t("navbar.projects")}</a>  
+          <a href="#skills" onClick={closeMenu}>{t("navbar.skills")}</a> 
+          <a href="#about" onClick={closeMenu}>{t("navbar.about")}</a> 
+          <a href="#contact" onClick={closeMenu}>{t("navbar.contact")}</a>   
 
           {/* Botões extras */}
           <div className={styles.nav_buttons}>
@@ -81,7 +81,11 @@ export default function Header({theme}) {
             </div>
 
             {/* Botão de tema */}
-            <button className={styles.btn_theme} onClick={theme}>{t("navbar.theme")}</button>  
+            <button className={styles.btn_theme}  
+              onClick={() => {
+                theme();
+                closeMenu();
+              }} >{t("navbar.theme")}</button>  
           </div> 
         </ul>
         

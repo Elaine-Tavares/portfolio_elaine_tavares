@@ -64,7 +64,7 @@ p  { font-size: 1rem; }
 }
 
 section{
-    box-shadow: 0 8px 12px -10px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 8px 12px -10px var(--text);
     padding: 2rem 0 5rem 0;   
     padding-inline: 1.5rem
 }
@@ -85,7 +85,7 @@ section{
   height: 50px;
 
   border-radius: 50%;
-  border: 2px solid red;
+  border: 2px solid var(--text);
 
   font-size: 22px;
   cursor: pointer;
@@ -97,7 +97,7 @@ section{
 }
 
 .scrollButton svg {
-  fill: red;
+  fill: var(--text);
   animation: bounceArrow 1.5s infinite ease-in-out;
 }
 

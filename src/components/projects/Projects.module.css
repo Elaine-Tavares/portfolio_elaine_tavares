@@ -1,5 +1,5 @@
 .projects_session{
-   box-shadow: 0 -8px 12px -10px rgba(255, 0, 0, 0.4); /*sombra no topo da sessão*/
+   box-shadow: 0 -8px 12px -10px var(--text); /*sombra no topo da sessão*/
    display: flex;
    flex-flow: column;
    width: 100%;
@@ -142,8 +142,8 @@ h2{
 }
 
 .highlight {
-  color: rgb(243, 124, 124);
-  font-weight: 600;
+  color: var(--text);
+  font-weight: bold;
 }
 
 /****************************************************************************/
