@@ -27,16 +27,16 @@
   "projects": {
     "title": "Projetos",
     "project1": {
-      "in_development": "Em Desenvolvimento...",
-      "name": "RunPlanner",
-      "description": "<1>Descrição: </1>Aplicação web para corredores criarem e gerenciarem planos de treino personalizados. Inclui cadastro e login de usuários, acesso demo, planejamento de treinos com métricas como pace e frequência cardíaca, acompanhamento de evolução e visualização de dados por meio de gráficos de desempenho.",
-      "technologies":"<1>Tecnologias: </1> React | CSS Modules | PHP | REST API | MySQL"
+      "in_development": "Concluído",
+      "name": "ProjetoFinanças",
+      "description": "<1>Descrição: </1> Aplicação web full stack para gerenciamento financeiro, com implementação de CRUD completo, consumo de API REST e integração com banco de dados. Interface onstruída em React com manipulação de estado e requisições HTTP (GET, POST, PUT, DELETE)",
+      "technologies":"<1>Tecnologias: </1> React | JavaScript | HTML | CSS Modules | PHP | MySQL | API REST | Git/GitHub"
     },
     "project2": {
       "in_development": "Concluído",
-      "name": "Portólio - Elaine TavaresWeb",
-      "description": "<1>Descrição: </1>Portfólio desenvolvido como SPA responsiva, com React no front-end e integração com backend em PHP/MySQL. Possui formulário funcional com validação, armazenamento em banco de dados e retorno automático de feedback ao usuário após envio.",
-      "technologies": "<1>Tecnologias :</1> React | CSS Modules | PHP | MySQL"
+      "name": "DevBlog",
+      "description": "<1>Descrição: </1>O DevBlog não é apenas mais um blog; é uma Single Page Application (SPA) robusta, projetada para ser um ponto de encontro entre desenvolvedores. Este projeto demonstra a integração fluida entre um frontend moderno e reativo com um backend sólido, focando em performance, experiência do usuário (UX) e facilidade de gerenciamento.",
+      "technologies": "<1>Tecnologias :</1> React | React Router Dom | CSS Modules | React Icons | Axios | PHP | MySQL"
     },
 
     "project3": {

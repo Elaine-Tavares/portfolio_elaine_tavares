@@ -7,7 +7,7 @@
 }
 
 :root {
-  --bg: #121212;
+  --bg: #2b2828;
   --text: #f1f5f9;
   --bg_header: rgba(15, 15, 15, 0.8);
   --bg_hamburger_span: #fff;;
@@ -175,6 +175,7 @@ section{
     h1 { font-size: 3.4rem; }
     h2 { font-size: 2.4rem; }
     p  { font-size: 1.15rem; }
+    .scrollButton {right: 60px;}
 }
 
 /* Telas grandes */

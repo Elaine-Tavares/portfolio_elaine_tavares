@@ -60,8 +60,8 @@ textarea {
 /* Focus elegante */
 input:focus,
 textarea:focus {
-  border-color: red;
-  box-shadow: 0 0 12px rgba(255,0,0,0.4);
+  border-color: var(--text);
+  box-shadow: 0 -8px 12px -10px var(--text);/*sombra no topo da sessão*/
 }
 
 input::placeholder{
@@ -71,23 +71,23 @@ input::placeholder{
 
 
 textarea::placeholder {
-color: var(--placeholder_color);
-   font-size: 1.2rem;
+  color: var(--placeholder_color);
+  font-size: 1.2rem;
 }
 
 .btn_form {
-  background: rgba(255, 0, 0, 0.425);
+  background: gray;
   padding: 14px;
   border-radius: 14px;
   border: none;
-  color: var(--btn_color);
+  color: black;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn_form:hover {
-  background: #ff2a2a;
+ 
   transform: translateY(-2px);
 }
 

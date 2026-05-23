@@ -1,9 +1,12 @@
 .footer {
-  box-shadow: 0 -4px 14px 0px var(--text);
-  width: 100%;
-  background: transparent;
+  /* box-shadow: 0 -4px 14px 0px var(--text); */
   padding-bottom: 10px;
   position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 1280px;
+  background-color: var(--bg_header);
 }
 
 .container {

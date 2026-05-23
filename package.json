@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.13.5",
     "i18next": "^25.8.11",
     "i18next-browser-languagedetector": "^8.2.1",
     "icons": "^1.0.0",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.564.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.0",

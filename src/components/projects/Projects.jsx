@@ -1,25 +1,35 @@
-import portfolio from './../../assets/images/projeto_portfolio.webp'
-import runplanner from './../../assets/images/projeto_runplanner.webp'
+import devblog from './../../assets/images/projeto_devblog.webp'
+import financas from './../../assets/images/projeto_financas.webp'
 import multistepform from './../../assets/images/projeto_multistepform.webp'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Trans, useTranslation } from "react-i18next";
 
 import styles from './Projects.module.css'
+import { useEffect } from 'react';
 
 export default function Projects() {
+  useEffect(() => {
+          AOS.init({
+            duration: 1000, // duração da animação (em ms)
+            once: false, // se a animação deve acontecer só uma vez
+          });
+      }, []);
+
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
 
   // Lista de projetos
   // Facilita adicionar novos projetos no futuro
   const listaProjetos = [
     { 
-      imagem: `${runplanner}`,  
-      in_development: "projects.project1.in_development",
+      imagem: `${financas}`,  
+      // in_development: "projects.project1.in_development",
       nameKey: "projects.project1.name",
       descKey: "projects.project1.description",
       tecnologias: "projects.project1.technologies",
-      deploy: 'https://run-planner-theta.vercel.app/',
-      github: 'https://github.com/Elaine-Tavares/run_planner.git',
+      deploy: 'https://elainetavaresweb.com/projetofinancas/',
+      github: 'https://github.com/Elaine-Tavares/projetofinancas',
       },
 
       {
@@ -32,12 +42,12 @@ export default function Projects() {
       },
 
     {
-      imagem: `${portfolio}`,
+      imagem: `${devblog}`,
       nameKey: "projects.project2.name",
       descKey: "projects.project2.description",
       tecnologias: "projects.project2.technologies",
-      deploy: 'https://elainetavaresweb.com/',
-      github: 'https://github.com/Elaine-Tavares/portfolio_elaine_tavares.git',
+      deploy: 'https://elainetavaresweb.com/devblog/',
+      github: 'https://github.com/Elaine-Tavares/devblog',
       }   
   ];
 
@@ -52,13 +62,16 @@ export default function Projects() {
           {listaProjetos.map((projeto, index) =>(
 
            //Card do projeto 
-           <div className={styles.project} key={index}>
+           <div className={styles.project} key={index} data-aos="fade-right">
              {projeto.in_development && <div className={styles.em_desenvolvimento}>{t(projeto.in_development)}</div>} 
 
              {/*Nome do projeto traduzido */}    
              <h4>{t(projeto.nameKey)}</h4>
 
-             <img src={projeto.imagem} alt="Imagem do projeto" />
+              <div className={styles.container_imagem}>
+                <img src={projeto.imagem} alt="Imagem do projeto" />
+              </div>
+             x
 
              {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavra em negrito */}
              <p className={styles.descricao}><Trans 

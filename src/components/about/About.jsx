@@ -1,5 +1,6 @@
-import avatar from './../../assets/images/avatar_vermelho.webp'
 import { Trans, useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import takingNotes from "../../assets/images/taking_notes.json";
 
 import styles from './About.module.css'
 
@@ -11,9 +12,11 @@ export default function About() {
       
       {/* Título traduzido */}
       <h2>{t("about.title")}</h2>
+      <div className={styles.about_animation}>
+          <Lottie animationData={takingNotes} loop={true} style={{ width: 200, height: 200, }}/>
+        </div>
          
       <div className={styles.about_session_container}>
-        <img src={avatar} alt="Avatar Elaine" />
         <div className={styles.texto_apresentacao}>
           <p>
             {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavras em negrito */}

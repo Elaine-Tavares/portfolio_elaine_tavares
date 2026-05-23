@@ -4,15 +4,25 @@ import { FaGithub } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import minhaFoto from './../../assets/images/elaine.webp'
 import { useTranslation } from "react-i18next";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Main.module.css'
+import { useEffect } from "react";
 
 export default function Main() {
+    useEffect(() => {
+            AOS.init({
+              duration: 1000, // duração da animação (em ms)
+              once: false, // se a animação deve acontecer só uma vez
+            });
+        }, []);
+
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
   
   return (
       <section id='main' className={styles.main_session}>
-          <div className={styles.main_session_text}>
+          <div className={styles.main_session_text} data-aos="fade-up">
             <div className={styles.text}>
               <div className={styles.container_div_h3}>
 
@@ -48,10 +58,10 @@ export default function Main() {
             <div className={styles.main_session_cv}>
 
               {/* Visualizar currículo */}
-              <a href="/curriculo_j_2026.pdf" target="_blank" rel="noopener noreferrer" className={styles.button}>{t("buttons.cv")}</a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.button}>{t("buttons.cv")}</a>
 
               {/* Baixar currículo */}
-              <a href="/curriculo_j_2026.pdf" download className={styles.button}>{t("buttons.cv2")}</a>
+              <a href="/resume.pdf" download className={styles.button}>{t("buttons.cv2")}</a>
             </div>
           </div>
 

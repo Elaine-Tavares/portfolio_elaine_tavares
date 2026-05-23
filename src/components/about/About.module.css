@@ -16,10 +16,12 @@
    line-height: 25px;
 }
 
-.about_session_container img{
-   width: 60%;
-   box-shadow: 0 0 15px var(--project_box_shadow);
-   border-radius: 18px;
+.about_animation{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   margin-top: -50px;
 }
 
 .texto_apresentacao{
@@ -38,6 +40,8 @@
   color: var(--text);
   font-weight: bold;
 }
+
+
 
 /****************************************************************************/
 /* Tablets */

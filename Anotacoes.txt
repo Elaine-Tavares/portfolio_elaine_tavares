@@ -12,3 +12,28 @@ FONTES PARA ENCONTRAR OPORTUNIDADES DE TRABALHO:
 - CIEE
 
 ______________________________________________________________________________________
+
+
+
+
+______________________________________________________________________________________
+
+31/03/26
+- Revisar meu perfil e cv no solides.com.br
+
+- Atualizar meus cv com as formatações do Claiton:
+	- Desenvolva um algoritmo para ordenar um vetor
+	- Ver curso de algoritmo
+	- Pesquisar sobre robô buscar palavra chave
+	- Pesquisar sobre portfólio ideal
+	- ver foto do portfolio
+	- currículo ATS
+	- o que é Noções de arquitetura front-end
+	- Sugestão da IA -> Inglês – Leitura técnica (documentação e artigos de desenvolvimento) ou Idiomas Inglês — leitura técnica para documentação e artigos de desenvolvimento (nível básico/intermediário).
+	- Telefone: +55 (21) 98451-0746
+	- incluir seção de projetos descrita no currículo. EX:
+Sugestão da IA
+
+	- Projeto: Dashboard de Controle Financeiro (React + API REST) • Desenvolvimento de interface responsiva em React para visualização de receitas e despesas. • Integração com API REST para carregamento dinâmico de dados. • Implementação de filtros e manipulação de estado para atualização em tempo real. • Deploy do projeto e versionamento com GitHub. Link: GitHub + Deploy Projeto: Aplicação de Lista de Tarefas (JavaScript) • Aplicação web com manipulação de DOM e armazenamento de dados em LocalStorage. • Funcionalidades de criação, edição e exclusão de tarefas. • Interface responsiva utilizando HTML, CSS e JavaScript.
+
+

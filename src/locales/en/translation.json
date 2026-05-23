@@ -27,16 +27,16 @@
   "projects": {
     "title": "Projects",
     "project1": {
-      "in_development": "In Development...",
-      "name": "RunPlanner",
-      "description": "<1>Description: </1>Web application for runners to create and manage personalized training plans. Includes user registration and login, demo access, workout planning with metrics such as pace and heart rate, progress tracking, and data visualization through performance charts.",
-      "technologies": "<1>Technologies: </1> React | CSS Modules | PHP | REST API | MySQL"
+      "in_development": "Completed",
+      "name": "FinanceProject",
+      "description": "<1>Description: </1> Full-stack web application for financial management, featuring complete CRUD implementation, REST API consumption, and database integration. Interface built with React, including state management and HTTP requests (GET, POST, PUT, DELETE)",
+      "technologies": "<1>Technologies: </1> React | JavaScript | HTML | CSS Modules | PHP | MySQL | API REST | Git/GitHub"
     },
     "project2": {
       "in_development": "Completed",
-      "name": "Elaine TavaresWeb' Portfolio",
-      "description": "<1>Description: </1> Responsive SPA portfolio built with React on the front end and integrated with a PHP/MySQL backend. Includes a fully functional form with validation, database storage, and automatic user feedback after submission.",
-      "technologies": "<1>Technologies :</1> React | CSS Modules | PHP | MySQL"
+      "name": "DevBlog",
+      "description": "<1>Description: </1> DevBlog is not just another blog; it is a robust Single Page Application (SPA), designed to be a meeting point for developers. This project demonstrates the seamless integration between a modern and reactive frontend with a solid backend, focusing on performance, user experience (UX), and ease of management.",
+      "technologies": "<1>Technologies :</1> React | React Router DOM | CSS Modules | React Icons | Axios | PHP | MySQL"
     },
    "project3": {
       "in_development": "Completed",
