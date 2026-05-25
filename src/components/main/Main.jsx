@@ -34,11 +34,10 @@ export default function Main() {
 
                 {/*Título traduzido*/}
                 <h1>{t("hero.title1")}</h1>
-                <h1>{t("hero.title2")}</h1>
+                <h2>{t("hero.title2")}</h2>
               </div> 
-            </div>
 
-             {/* Redes sociais */}
+              {/* Redes sociais */}
             <div className={styles.main_session_social}>
 
               {/* Linkedin */}
@@ -54,7 +53,7 @@ export default function Main() {
               <a href="https://wa.link/307ehj" target="_blank" rel="noopener noreferrer"><FaWhatsappSquare className={styles.whats}/></a>
             </div> 
 
-            {/* Botões do currículo */}
+             {/* Botões do currículo */}
             <div className={styles.main_session_cv}>
 
               {/* Visualizar currículo */}
@@ -63,10 +62,11 @@ export default function Main() {
               {/* Baixar currículo */}
               <a href="/resume.pdf" download className={styles.button}>{t("buttons.cv2")}</a>
             </div>
+           </div>   
           </div>
 
-          {/* Cntainer com Imagem + animação */}
-          <div className={styles.main_session_img}>
+          {/* Container com Imagem + animação */}
+          <div className={styles.main_session_img} data-aos="fade-up">
 
            {/* SVG animado*/}
            <svg
@@ -85,71 +85,86 @@ export default function Main() {
 
               {/* Textos animados */}
               {/* Simulam código passando na tela */} 
-              <text x="60" y="-200">
+              <text x="60" y="0">
                 MySQL → SELECT *
-                <animate attributeName="y" from="-300" to="650" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="3s" repeatCount="indefinite"/>
               </text>
 
-              <text x="60" y="-200">
+              <text x="220" y="0">
                 React → useState()
-                <animate attributeName="y" from="-200" to="650" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="3s" repeatCount="indefinite"/>
               </text>
 
-              <text x="220" y="-350">
+              <text x="100" y="0">
                 JavaScript → console.log()
-                <animate attributeName="y" from="-350" to="650" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="4s" repeatCount="indefinite"/>
               </text>
 
-              <text x="450" y="-250">
+              <text x="450" y="0">
                 HTML → &lt;section/&gt;
-                <animate attributeName="y" from="-250" to="650" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="5s" repeatCount="indefinite"/>
               </text>
 
-              <text x="100" y="-500">
+              <text x="380" y="0">
                 CSS → display: flex;
-                <animate attributeName="y" from="-500" to="650" dur="5.5s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="6s" repeatCount="indefinite"/>
               </text>
 
-              <text x="380" y="-450">
+              <text x="60" y="0">
                 PHP → echo "Hello";
-                <animate attributeName="y" from="-450" to="650" dur="6.5s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="7s" repeatCount="indefinite"/>
               </text>
 
-              <text x="450" y="-300">
+              <text x="60" y="0">
                 React → useEffect()
-                <animate attributeName="y" from="-300" to="650" dur="8s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="-0" to="2000" dur="8s" repeatCount="indefinite"/>
               </text>
 
-              <text x="300" y="-600">
+              <text x="380" y="0">
                 GitHub → git commit
-                <animate attributeName="y" from="-600" to="650" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="9s" repeatCount="indefinite"/>
               </text>
 
-              <text x="520" y="-700">
+              <text x="450" y="0">
                 Vercel → deploy
-                <animate attributeName="y" from="-700" to="650" dur="7.5s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="10s" repeatCount="indefinite"/>
               </text>
 
-               <text x="60" y="-200">
+               <text x="100" y="0">
                 React → useState()
-                <animate attributeName="y" from="-200" to="650" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="11s" repeatCount="indefinite"/>
               </text>
 
-               <text x="100" y="-500">
+               <text x="220" y="0">
                 CSS → display: flex;
-                <animate attributeName="y" from="-500" to="650" dur="5.5s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="12s" repeatCount="indefinite"/>
               </text>
 
-              <text x="100" y="-500">
+              <text x="60" y="0">
                 Vercel → deploy
-                <animate attributeName="y" from="-500" to="650" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="13s" repeatCount="indefinite"/>
               </text>
              </g>
             </svg>
 
              {/* Foto */}
-            <img src={minhaFoto} alt="Rosto de Elaine Tavares, mulher morena com olhos e cabelos castanhos."/>     
+            <img src={minhaFoto} alt="Rosto de Elaine Tavares, mulher morena com olhos e cabelos castanhos."/>
+            
+            {/* CTA WhatsApp */}
+            <div className={styles.whatsapp_cta_container}>
+              <a 
+                href="https://wa.link/307ehj" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.whatsapp_cta}
+              >
+                <FaWhatsappSquare className={styles.cta_icon} />
+                <span>{t("hero.cta_whatsapp") || "Vamos conversar?"}</span>
+              </a>
+            </div>
+
           </div>
+          
       </section>
   )
 }

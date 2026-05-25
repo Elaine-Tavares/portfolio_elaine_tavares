@@ -57,7 +57,12 @@ export default function About() {
           <br />
           <p>
              {/* Parágrafo traduzido */}
-            {t("about.paragraph4")}
+           <Trans
+              i18nKey="about.paragraph4"
+              components={{
+                1: <strong className={styles.highlight} />,
+              }}
+            />
           </p>
         </div>
       </div>

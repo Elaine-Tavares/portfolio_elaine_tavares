@@ -50,7 +50,10 @@ function App() {
   return (
     <>
       {/* Header recebe função para alternar tema */}
-      <Header theme={() => setTheme(theme === "dark" ? "light" : "dark")}/>
+      <Header 
+        currentTheme={theme} 
+        theme={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
 
       <main className="container">
         <Main/>

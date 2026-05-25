@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Portfólio Dev Front-End - Elaine Tavares"
+    "title": "Portfólio Desenvolvedora Web - Elaine Tavares"
 },
 
   "navbar": {
@@ -15,8 +15,9 @@
   "hero": {
     "greeting": "Olá! Eu sou",
     "name": "Elaine Tavares.",
-    "title1": "Desenvolvedora",
-    "title2": "Front-End Jr."
+    "title1": "Desenvolvedora Web",
+    "title2": "Focada em criar interfaces modernas, responsivas e orientadas à conversão, ajudando negócios a transformarem presença digital em resultados reais.",
+    "cta_whatsapp": "Vamos conversar?"
   },
 
   "buttons": {
@@ -54,10 +55,13 @@
 
   "about": {
     "title": "Sobre Mim",
-    "paragraph1": "Sou desenvolvedora <1>Front-End</1> em transição de carreira, construindo minha trajetória na tecnologia com foco em interfaces funcionais, bem estruturadas e com boa experiência para o usuário. Minha formação em <2>Gestão Financeira</2> e os estudos atuais em <3>Sistemas para Internet</3> me deram uma visão mais prática e analítica na hora de desenvolver soluções.",
-    "paragraph2": "Trabalho com <1>React, JavaScript, HTML e CSS</1>, priorizando código limpo, responsividade e integração com <2>APIs.</2> Também tenho conhecimentos em <3>PHP</3> e <4>MySQL,</4> o que me permite explorar o backend também.",
-    "paragraph3": "Ao longo dos estudos desenvolvi projetos próprios, <1>freelance</1> e <2>trabalho voluntário</2>, experiências que fortaleceram minha organização, autonomia, versionamento com <3>Git/GitHub</3> e senso de responsabilidade com a qualidade do que entrego.",
-    "paragraph4": "Estou consolidando minha carreira em desenvolvimento Front-End (com exploração do backend) e busco oportunidades onde eu possa evoluir tecnicamente e gerar impacto real com o que construo."
+    "paragraph1": "Sou <1>desenvolvedora Web</1> focada em criar interfaces modernas, responsivas e orientadas à conversão, ajudando negócios a transformarem presença digital em resultados reais.",
+
+    "paragraph2": "Atuo com <1>React, JavaScript, HTML e CSS</1>, desenvolvendo aplicações com código limpo, boa performance e integração com <2>APIs</2>. Também possuo conhecimentos em <3>PHP e MySQL</3>, o que me permite compreender e contribuir com soluções de ponta a ponta. Minha formação em Gestão Financeira, aliada aos estudos em Sistemas para Internet, me proporciona uma visão analítica e orientada a resultados — não apenas desenvolvo interfaces, mas penso no impacto que elas geram para o negócio.",
+
+    "paragraph3": "Tenho experiência com projetos próprios e freelance, o que fortaleceu minha autonomia, organização e compromisso com <1>entregas de qualidade</1>.",
+
+    "paragraph4": "Atualmente, busco oportunidades onde eu possa evoluir tecnicamente e, principalmente, <1>gerar valor através de soluções bem construídas</1>, que melhorem a experiência do usuário e apoiem o crescimento de negócios."
   },
 
   "form": {

@@ -1,12 +1,10 @@
 .main_session{
     display: flex;
-    flex-flow: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 150px;      
-    animation: fadeIn 3s ease ;            
+    width: 100%;    
+    animation: fadeIn 3s ease ;          
 }
 
 @keyframes fadeIn {
@@ -26,7 +24,8 @@
     display: flex;
     flex-flow: column;
     justify-content: start;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
+    padding-top: 150px;
 }
 
 .text{
@@ -37,13 +36,17 @@
     gap: 0;
 }
 
-.container_div_h3{
-    height: 55x;
-}
 
 .container_div_h3 h3{
     text-align: start;
     margin: 0;
+}
+
+.container_div_h1 h2{
+   font-size: 18px;
+   text-align: start;
+   line-height: 35px;
+   margin-top: 30px;
 }
 
 .main_session_text h1, h3{
@@ -51,9 +54,11 @@
 }
 
 .main_session_social{
-    margin-block: 40px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .main_session a{
@@ -104,12 +109,13 @@
 }
 
 .main_session_cv{
+    width: 100%;
     text-align: center;
     margin-block: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 50px;
+   
 }
 
 .button{
@@ -135,12 +141,28 @@
     text-shadow: 0 2px 8px black;
 }
 
+
+
 .main_session_img{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     position: relative;
+    height: 450px;
+}
+
+.main_session_img img{
+  box-shadow: 4px 4px 14px 0px var(--img_main_box_shadow);
+  width: 60%;
+  border-radius: 50%; 
+  border: 2px solid green; 
+  text-align: center;
+  align-self: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 80px;
 }
 
 .bg_svg {
@@ -149,30 +171,83 @@
   top: -40px;
   width: 100%;
   height: 300px;
-  z-index: 0;
+  z-index: 1;
 }
 
-.main_session_img img{
-  box-shadow: 4px 4px 14px 0px var(--img_main_box_shadow);
-  width: 50%;
-  border-radius: 50%;  
+
+
+.whatsapp_cta_container {
+    margin-top: 120px;
+    margin-bottom: -200px;
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp_cta {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    border: 2px solid transparent;
+}
+
+.whatsapp_cta:hover {
+    transform: translateY(-3px) scale(1.05);
+    background-color: #20ba5a;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    border-color: white;
+}
+
+.cta_icon {
+    font-size: 1.8rem;
+}
+
+.whatsapp_cta span {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
 
 /****************************************************************************/
 /* Tablets */
 @media (min-width: 768px) {
-    .main_session{
-      flex-flow: row;
+
+    .main_session_text{
+        padding-top: 50px;
+        width: 50%;
+}
+
+ .main_session_img {
+      width: 50%;
+      height: 700px;
     }
 
     .main_session_img img{
-      width: 65%;
+      width: 70%;
+      top: 200px;
+      
     }
 
     .bg_svg {
       margin-top: -35px;
       height: 340px;
    }
+
+   .whatsapp_cta_container {
+    margin-bottom: -450px; 
+}
+
+.container_div_h3{
+    margin-top: 100px;
+   
+}
+
 }
 
 /* Laptops pequenos */
@@ -189,6 +264,18 @@
       margin-top: -40px;
       height: 380px;
    }
+
+   .container_div_h1 h2{
+    width:580px;
+   }
+
+   .main_session_social{
+    justify-content: space-around; 
+}
+
+  .whatsapp_cta_container {
+    margin-bottom: -400px; 
+}
 
 }
 

@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import i18n from "i18next";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Sun, Moon } from 'lucide-react';
 import './../../i18n' 
 
 import styles from './Header.module.css';
 
-export default function Header({theme}) {
+export default function Header({theme, currentTheme}) {
   /*Lógica no menu mobile:
   - function toggleMenu alterna o estado do menu;
   - function closeMenu sempre seta o estado para menuOpen = false;
@@ -85,7 +86,10 @@ export default function Header({theme}) {
               onClick={() => {
                 theme();
                 closeMenu();
-              }} >{t("navbar.theme")}</button>  
+              }} 
+            >
+              {currentTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>  
           </div> 
         </ul>
         

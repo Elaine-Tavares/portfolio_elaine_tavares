@@ -1,7 +1,6 @@
 .about_session{
    box-shadow: 0 -8px 12px -10px var(--text);/*sombra no topo da sessão*/
    padding-top: 150px;
-   min-height: 100vh; 
 }
 
 .about_session_container{
@@ -37,8 +36,11 @@
 }
 
 .highlight {
-  color: var(--text);
+  color: black;
+  text-shadow: 2px 2px 5px #fff;
+ 
   font-weight: bold;
+  font-size: 20px;
 }
 
 
@@ -49,6 +51,7 @@
   .about_session_container img{
      width: 35%;
   }
+
 }
 
 /* Laptops pequenos */
