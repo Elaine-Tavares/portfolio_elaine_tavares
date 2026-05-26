@@ -1,0 +1,55 @@
+.scrollButton {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 2px solid var(--text);
+
+  font-size: 22px;
+  cursor: pointer;
+
+  background: var(--primary-color);
+  color: white;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.scrollButton svg {
+  fill: var(--text);
+  animation: bounceArrow 1.5s infinite ease-in-out;
+}
+
+@keyframes bounceArrow {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@media (min-width: 1024px) {
+    .scrollButton { 
+     right: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .scrollButton { 
+     right: 60px;
+    }
+}

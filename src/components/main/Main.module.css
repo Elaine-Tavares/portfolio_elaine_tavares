@@ -88,7 +88,7 @@
 
 .github{
     font-size: 2.5rem;
-    color: var(--github_color);
+    color: var(--github_main_color);
     border-radius: 50%;
     transition: all 0.4s ease;
 }
@@ -119,9 +119,9 @@
 }
 
 .button{
-    color:var(--btn_color);
+    color: var(--btn_text);
     border: 1px solid var(--btn_border);
-    background-color: transparent;
+    background-color: var(--btn_background);
     font-weight: bold;
     font-size: 0.8rem;
     padding: 10px 20px;
@@ -135,9 +135,9 @@
 }
 
 .button:hover{
-    background-color: #fff;
-    color: black;
-    box-shadow: 4px 4px 14px 0px #fff;
+    background-color: transparent;
+    color: var(--btn_color_hover);
+    box-shadow: var(--btn_box_shadow);
     text-shadow: 0 2px 8px black;
 }
 

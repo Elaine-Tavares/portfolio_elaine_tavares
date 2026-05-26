@@ -71,8 +71,6 @@ export default function Projects() {
               <div className={styles.container_imagem}>
                 <img src={projeto.imagem} alt="Imagem do projeto" />
               </div>
-             x
-
              {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavra em negrito */}
              <p className={styles.descricao}><Trans 
                            i18nKey={t(projeto.descKey)}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BiSolidToTop } from "react-icons/bi";
 
+import styles from './ScrollToTop.module.css'
+
 export default function ScrollToTop() {
 
   // Controla se o botão deve aparecer ou não
@@ -50,7 +52,7 @@ export default function ScrollToTop() {
   if (!showButton) return null;
 
   return (
-    <button onClick={scrollTop} className="scrollButton">
+    <button onClick={scrollTop} className={styles.scrollButton}>
       <BiSolidToTop/>
     </button>
   );

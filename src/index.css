@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 :root {
@@ -11,16 +11,25 @@
   --text: #f1f5f9;
   --bg_header: rgba(15, 15, 15, 0.8);
   --bg_hamburger_span: #fff;;
-  --btn_color: #fff;
-  --btn_border: #fff;
-  --github_color: #C9D1D9;
-  --project_box_shadow: rgba(255, 255, 255, 0.12);
-  --project_box_shadow_hover: rgba(255, 255, 255, 0.25);
+  --btn_color: black;
+  --btn_border: black;
+  --btn_border_hover: #fff;
+  --btn_color_hover: #fff;
+  --btn_box_shadow: 4px 4px 14px 0px #fff;
+  --github_color: black;
+  --github_main_color: #C9D1D9;
+  --project_box_shadow: #fff;
   --img_main_box_shadow: #fff;
   --input_border: rgba(255,255,255,0.2);
   --input_bg: rgba(255,255,255,0.05);
   --placeholder_color: rgba(255,255,255,0.5);
   --svg: rgba(51, 153, 255, 1);
+  --btn_text: black;
+  --btn_background: #fff;
+  --project_background: rgb(214, 210, 210);
+  --project_text: black;
+  --highlight_shadow: black;
+  --title_shadow: #fff;
 }
 
 body.light {
@@ -28,9 +37,12 @@ body.light {
   --text: #121212;
   --bg_header: hsl(0, 1%, 76%, 0.8);
   --bg_hamburger_span: #000;
-  --btn_color: black;
-  --btn_border: black;
-  --github_color: black;
+  --btn_color: #fff;
+  --btn_border: #fff;
+  --btn_color_hover: black;
+  --btn_box_shadow: 4px 4px 14px 0px black;
+  --github_color: #C9D1D9;
+   --github_main_color: black;
   --project_box_shadow:rgba(5, 5, 5, 0.699);
   --project_box_shadow_hover:rgba(5, 5, 5, 1000);
   --img_main_box_shadow: black;
@@ -38,6 +50,13 @@ body.light {
   --input_bg: rgba(0,0,0,0.05);
   --placeholder_color: rgba(0,0,0,0.5);
   --svg: black;
+  --btn_text: #fff;
+  --btn_background: black;
+  --project_background: black;
+  --project_text: #fff;
+  --highlight_shadow: #fff;
+  --title_shadow: black;
+  
 }
 
 body{
@@ -71,50 +90,6 @@ section{
 
 .logo{
   display: none;
-}
-
-.scrollButton {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-  border: 2px solid var(--text);
-
-  font-size: 22px;
-  cursor: pointer;
-
-  background: var(--primary-color);
-  color: white;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.scrollButton svg {
-  fill: var(--text);
-  animation: bounceArrow 1.5s infinite ease-in-out;
-}
-
-@keyframes bounceArrow {
-
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-
 }
 
 /* Tablets */
@@ -175,7 +150,6 @@ section{
     h1 { font-size: 3.4rem; }
     h2 { font-size: 2.4rem; }
     p  { font-size: 1.15rem; }
-    .scrollButton {right: 60px;}
 }
 
 /* Telas grandes */

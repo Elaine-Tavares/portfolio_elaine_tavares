@@ -7,7 +7,7 @@
 }
 
 h2{
-  text-shadow: 0 2px 8px #fff;
+  text-shadow: 0 2px 8px var(--title_shadow);
   text-align: center;
   margin-bottom: 50px;
 }
@@ -19,6 +19,7 @@ h2{
   justify-content: center;
   gap: 50px;
   align-items: stretch; /* Os elementos filhos vão aumentar de altura automaticamente para ocupar todo o container (se o flex for em linha). */
+  width: 100%;
 }
 
 .project{
@@ -29,16 +30,16 @@ h2{
   justify-content: center;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 10px 30px var(--project_box_shadow);
   border-radius: 18px;
-  padding-block: 15px;
-  position: relative;
+  padding: 15px;
+  background-color: var(--project_background);
+  color: var(--project_text);
   transition: all 0.3s ease; 
 }
 
 .project:hover {
-  box-shadow: 0 14px 40px var(--project_box_shadow_hover);
   transform: translateY(-4px);
+  box-shadow: 0 0 15px var(--project_box_shadow);
 }
 
 .project h4{
@@ -59,7 +60,6 @@ h2{
 }
 
 .project p{
-  width: 90%;
   margin: 0 auto;
   text-align: justify;
   letter-spacing: 3px;
@@ -107,7 +107,7 @@ h2{
     width: 140px;
     text-align: center;
     text-decoration: none;
-    transition: all 0.4 ease;
+    transition: all .3s ;
 }
 
 .buttons a:hover{
@@ -115,6 +115,7 @@ h2{
     color: black;
     box-shadow: 4px 4px 14px 0px #fff;
     text-shadow: 0 2px 8px black;
+    border: 1px solid var(--btn_border_hover);
 }
 
 .em_desenvolvimento{
@@ -148,7 +149,7 @@ h2{
 }
 
 .highlight {
-  color: var(--text);
+  color: var(--project_text);
   font-weight: bold;
 }
 
@@ -162,13 +163,7 @@ h2{
 
 /* Laptops pequenos */
 @media (min-width: 1024px) {
-   .projects_container{  
-     gap: 5px;
-   }
-
-  .project{
-    width: 33%;
-  }
+   
 }
 
 /* Desktop */

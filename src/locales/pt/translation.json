@@ -30,7 +30,7 @@
     "project1": {
       "in_development": "Concluído",
       "name": "ProjetoFinanças",
-      "description": "<1>Descrição: </1> Aplicação web full stack para gerenciamento financeiro, com implementação de CRUD completo, consumo de API REST e integração com banco de dados. Interface onstruída em React com manipulação de estado e requisições HTTP (GET, POST, PUT, DELETE)",
+      "description": "<1>Descrição: </1> Aplicação web full stack para gerenciamento financeiro, com implementação de CRUD completo, consumo de API REST e integração com banco de dados. Interface construída em React com manipulação de estado e requisições HTTP (GET, POST, PUT, DELETE).",
       "technologies":"<1>Tecnologias: </1> React | JavaScript | HTML | CSS Modules | PHP | MySQL | API REST | Git/GitHub"
     },
     "project2": {

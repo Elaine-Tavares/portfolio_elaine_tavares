@@ -13,6 +13,7 @@
    margin: 0 auto;
    padding-top: 20px;
    line-height: 25px;
+   background-color: var(--project_background);
 }
 
 .about_animation{
@@ -27,20 +28,19 @@
    width: 100%;
    padding: 1rem;
    text-indent: 2rem;
+   
 }
 
 .texto_apresentacao p{
    text-align: justify;
    font-weight: 500;
-   color: var(--text);
+   color: var(--project_text)
 }
 
 .highlight {
-  color: black;
-  text-shadow: 2px 2px 5px #fff;
- 
-  font-weight: bold;
-  font-size: 20px;
+  color: var(--project_text);
+  text-shadow: 2px 2px 3px var(--highlight_shadow);
+  font-weight: bold; 
 }
 
 
