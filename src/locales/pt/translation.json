@@ -27,6 +27,12 @@
   
   "projects": {
     "title": "Projetos",
+      "project0": {
+      "in_development": "Concluído",
+      "name": "Projeto Voluntário Nova Cidade Juntos Somos Mais Fortes",
+      "description": "<1>Descrição: </1>Site institucional desenvolvido de forma voluntária para fortalecer a presença digital do projeto social Nova Cidade Juntos Somos Mais Fortes. A aplicação apresenta suas iniciativas, cursos e formas de apoio, oferecendo uma experiência responsiva, acessível e acolhedora para aproximar o projeto da comunidade.",
+      "technologies": "<1>Tecnologias: </1> React | JavaScript | HTML | CSS Modules | Git/GitHub"
+    },
     "project1": {
       "in_development": "Concluído",
       "name": "ProjetoFinanças",

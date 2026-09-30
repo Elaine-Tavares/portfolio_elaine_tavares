@@ -7,20 +7,10 @@ import { SiMysql } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import styles from './Skills.module.css'
-import { useEffect } from "react";
 
 export default function Skills() {
-    useEffect(() => {
-              AOS.init({
-                duration: 1000, // duração da animação (em ms)
-                once: false, // se a animação deve acontecer só uma vez
-              });
-          }, []);
-
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
 
   return (

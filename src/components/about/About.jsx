@@ -1,5 +1,6 @@
 import { Trans, useTranslation } from "react-i18next";
-import Lottie from "lottie-react";
+import { Suspense, lazy } from "react";
+const Lottie = lazy(() => import("lottie-react"));
 import takingNotes from "../../assets/images/taking_notes.json";
 
 import styles from './About.module.css'
@@ -13,7 +14,9 @@ export default function About() {
       {/* Título traduzido */}
       <h2>{t("about.title")}</h2>
       <div className={styles.about_animation}>
-          <Lottie animationData={takingNotes} loop={true} style={{ width: 200, height: 200, }}/>
+          <Suspense fallback={<div style={{ width: 200, height: 200 }} />}>
+            <Lottie animationData={takingNotes} loop={true} style={{ width: 200, height: 200, }}/>
+          </Suspense>
         </div>
          
       <div className={styles.about_session_container}>

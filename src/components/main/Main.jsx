@@ -4,20 +4,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import minhaFoto from './../../assets/images/elaine.webp'
 import { useTranslation } from "react-i18next";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import styles from './Main.module.css'
-import { useEffect } from "react";
 
 export default function Main() {
-    useEffect(() => {
-            AOS.init({
-              duration: 1000, // duração da animação (em ms)
-              once: false, // se a animação deve acontecer só uma vez
-            });
-        }, []);
-
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
   
   return (
@@ -41,16 +31,16 @@ export default function Main() {
             <div className={styles.main_session_social}>
 
               {/* Linkedin */}
-              <a href="https://www.linkedin.com/in/elainetavaresweb/" target="_blank" rel="noopener noreferrer"><FaLinkedin className={styles.linkedin}/></a>
+              <a href="https://www.linkedin.com/in/elainetavaresweb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin className={styles.linkedin}/></a>
 
               {/* Instagram */}
-              <a href="https://www.instagram.com/elainetavares2026/" target="_blank" rel="noopener noreferrer"><FaInstagramSquare className={styles.instagram}/></a>
+              <a href="https://www.instagram.com/elainetavares2026/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagramSquare className={styles.instagram}/></a>
 
               {/* GitHub */}
-              <a href="https://github.com/Elaine-Tavares" target="_blank" rel="noopener noreferrer"><FaGithub className={styles.github}/></a>
+              <a href="https://github.com/Elaine-Tavares" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub className={styles.github}/></a>
 
               {/* Whats */}
-              <a href="https://wa.link/307ehj" target="_blank" rel="noopener noreferrer"><FaWhatsappSquare className={styles.whats}/></a>
+              <a href="https://wa.link/307ehj" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsappSquare className={styles.whats}/></a>
             </div> 
 
              {/* Botões do currículo */}
@@ -68,7 +58,7 @@ export default function Main() {
           {/* Container com Imagem + animação */}
           <div className={styles.main_session_img} data-aos="fade-up">
 
-           {/* SVG animado*/}
+           {/* SVG animado reduzido para performance */}
            <svg
             className={styles.bg_svg}
             viewBox="0 0 800 600"
@@ -81,74 +71,38 @@ export default function Main() {
               fontFamily="monospace"
               fontSize="30"
               fontWeight="400"
+              opacity="0.3"
             >
-
-              {/* Textos animados */}
-              {/* Simulam código passando na tela */} 
+              {/* Mantendo apenas algumas animações essenciais */}
               <text x="60" y="0">
                 MySQL → SELECT *
-                <animate attributeName="y" from="0" to="2000" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="8s" repeatCount="indefinite"/>
               </text>
 
               <text x="220" y="0">
                 React → useState()
-                <animate attributeName="y" from="0" to="2000" dur="3s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="100" y="0">
-                JavaScript → console.log()
-                <animate attributeName="y" from="0" to="2000" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="y" from="0" to="2000" dur="10s" repeatCount="indefinite"/>
               </text>
 
               <text x="450" y="0">
                 HTML → &lt;section/&gt;
-                <animate attributeName="y" from="0" to="2000" dur="5s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="380" y="0">
-                CSS → display: flex;
-                <animate attributeName="y" from="0" to="2000" dur="6s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="60" y="0">
-                PHP → echo "Hello";
-                <animate attributeName="y" from="0" to="2000" dur="7s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="60" y="0">
-                React → useEffect()
-                <animate attributeName="y" from="-0" to="2000" dur="8s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="380" y="0">
-                GitHub → git commit
-                <animate attributeName="y" from="0" to="2000" dur="9s" repeatCount="indefinite"/>
-              </text>
-
-              <text x="450" y="0">
-                Vercel → deploy
-                <animate attributeName="y" from="0" to="2000" dur="10s" repeatCount="indefinite"/>
-              </text>
-
-               <text x="100" y="0">
-                React → useState()
-                <animate attributeName="y" from="0" to="2000" dur="11s" repeatCount="indefinite"/>
-              </text>
-
-               <text x="220" y="0">
-                CSS → display: flex;
                 <animate attributeName="y" from="0" to="2000" dur="12s" repeatCount="indefinite"/>
               </text>
 
-              <text x="60" y="0">
-                Vercel → deploy
-                <animate attributeName="y" from="0" to="2000" dur="13s" repeatCount="indefinite"/>
+              <text x="100" y="0">
+                JavaScript → console.log()
+                <animate attributeName="y" from="0" to="2000" dur="15s" repeatCount="indefinite"/>
               </text>
              </g>
             </svg>
 
              {/* Foto */}
-            <img src={minhaFoto} alt="Rosto de Elaine Tavares, mulher morena com olhos e cabelos castanhos."/>
+            <img 
+              src={minhaFoto} 
+              alt="Rosto de Elaine Tavares, mulher morena com olhos e cabelos castanhos."
+              loading="eager"
+              fetchpriority="high"
+            />
             
             {/* CTA WhatsApp */}
             <div className={styles.whatsapp_cta_container}>

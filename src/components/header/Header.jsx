@@ -1,22 +1,13 @@
 import { useState, useEffect } from 'react';
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-import { Sun, Moon } from 'lucide-react';
+import { FiSun, FiMoon } from 'react-icons/fi';
 import './../../i18n' 
 
 import styles from './Header.module.css';
 
 export default function Header({theme, currentTheme}) {
-  /*Lógica no menu mobile:
-  - function toggleMenu alterna o estado do menu;
-  - function closeMenu sempre seta o estado para menuOpen = false;
-  - de acordo com a alteração do estado o estilo é controlado dando o comportamento de menu fechado(rigth: -100%) ou aberto(rigth: 0%).
-  */
-  const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
-
-//   function LanguageSwitcher() {
-//     const { i18n } = useTranslation();
-// }
+  const { t } = useTranslation();
 
   // Estado do menu mobile (aberto/fechado)
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +18,7 @@ export default function Header({theme, currentTheme}) {
   }
 
   // Função que fecha o menu
-  function closeMenu(e){
+  function closeMenu(){
     setMenuOpen(false)
   }
 
@@ -55,8 +46,8 @@ export default function Header({theme, currentTheme}) {
           className={`${styles.hamburger} 
           ${menuOpen ? styles.open : ""}`}
           onClick={toggleMenu}
+          aria-label="Menu"
         >
-          {/*spans para animação do hamburger*/}
           <span></span> 
           <span></span>
           <span></span>
@@ -64,36 +55,30 @@ export default function Header({theme, currentTheme}) {
 
         {/* Menu */}
         <ul className={`${styles.menu} ${menuOpen ? styles.show_menu : ""}`}>
+          <li><a href="#main" onClick={closeMenu}>{t("navbar.home")}</a></li>
+          <li><a href="#projects" onClick={closeMenu}>{t("navbar.projects")}</a></li>
+          <li><a href="#skills" onClick={closeMenu}>{t("navbar.skills")}</a></li>
+          <li><a href="#about" onClick={closeMenu}>{t("navbar.about")}</a></li>
+          <li><a href="#contact" onClick={closeMenu}>{t("navbar.contact")}</a></li>
 
-          {/* Links do menu */}    
-          <a href="#main" onClick={closeMenu}>{t("navbar.home")}</a>  
-          <a href="#projects" onClick={closeMenu}>{t("navbar.projects")}</a>  
-          <a href="#skills" onClick={closeMenu}>{t("navbar.skills")}</a> 
-          <a href="#about" onClick={closeMenu}>{t("navbar.about")}</a> 
-          <a href="#contact" onClick={closeMenu}>{t("navbar.contact")}</a>   
-
-          {/* Botões extras */}
           <div className={styles.nav_buttons}>
-
-            {/* Troca de idioma */}
-            <div className={styles.languages} onClick={closeMenu}>
-              <img onClick={() => i18n.changeLanguage("pt")} src="/flag_brazil.webp" alt="Bandeira do Brasil" />
-              <img onClick={() => i18n.changeLanguage("en")} src="/flag_usa.webp" alt="Bandeira dos USA" />       
+            <div className={styles.languages}>
+              <img onClick={() => { i18n.changeLanguage("pt"); closeMenu(); }} src="/flag_brazil.webp" alt="Bandeira do Brasil" aria-label="Português" loading="lazy" />
+              <img onClick={() => { i18n.changeLanguage("en"); closeMenu(); }} src="/flag_usa.webp" alt="Bandeira dos USA" aria-label="English" loading="lazy" />       
             </div>
 
-            {/* Botão de tema */}
             <button className={styles.btn_theme}  
               onClick={() => {
                 theme();
                 closeMenu();
               }} 
+              aria-label={currentTheme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
             >
-              {currentTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {currentTheme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
             </button>  
           </div> 
         </ul>
         
-        {/*overlay só aparece quando o menu estiver aberto*/}
         {menuOpen && (
           <div 
             className={styles.overlay} 

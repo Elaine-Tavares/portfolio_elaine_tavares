@@ -27,6 +27,12 @@
   
   "projects": {
     "title": "Projects",
+    "project0": {
+      "in_development": "Concluído",
+      "name": "Nova Cidade Juntos Somos Mais Fortes Volunteer Project",
+      "description": "<1>Description: </1>Institutional website developed voluntarily to strengthen the digital presence of the Nova Cidade Juntos Somos Mais Fortes social project. The application presents its initiatives, courses, and ways to support the project, providing a responsive, accessible, and welcoming experience to bring the project closer to the community.",
+      "technologies": "<1>Technologies: </1> React | JavaScript | HTML | CSS Modules | Git/GitHub"
+    },
     "project1": {
       "in_development": "Completed",
       "name": "FinanceProject",

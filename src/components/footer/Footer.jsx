@@ -18,16 +18,16 @@ export default function Footer() {
         <div className={styles.main_session_social}>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/elainetavaresweb/" target='_blank' rel="noopener noreferrer"><FaLinkedin className={styles.linkedin}/></a>
+            <a href="https://www.linkedin.com/in/elainetavaresweb/" target='_blank' rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin className={styles.linkedin}/></a>
 
             {/* Instagram */}
-            <a href="https://www.instagram.com/elainetavares2026/" target='_blank' rel="noopener noreferrer"><FaInstagramSquare className={styles.instagram}/></a>
+            <a href="https://www.instagram.com/elainetavares2026/" target='_blank' rel="noopener noreferrer" aria-label="Instagram"><FaInstagramSquare className={styles.instagram}/></a>
 
             {/* GitHub */}
-            <a href="https://github.com/Elaine-Tavares" target='_blank' rel="noopener noreferrer"><FaGithub className={styles.github}/></a>
+            <a href="https://github.com/Elaine-Tavares" target='_blank' rel="noopener noreferrer" aria-label="GitHub"><FaGithub className={styles.github}/></a>
 
             {/* Whats */}
-            <a href="https://wa.link/307ehj" target='_blank' rel="noopener noreferrer"><FaWhatsappSquare className={styles.whats}/></a>
+            <a href="https://wa.link/307ehj" target='_blank' rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsappSquare className={styles.whats}/></a>
         </div> 
         
         <p className={styles.copy}>
@@ -41,7 +41,7 @@ export default function Footer() {
       <a href="#main" className="logo">
         <div className="logo_container_capivara">
           <span>Elaine</span>
-          <img src='/logo.png' alt="Capivara na frente de um notebook" />
+          <img src='/logo.png' alt="Capivara na frente de um notebook" loading="lazy" />
         </div>
         <span className="tavares">TavaresWeb</span>
       </a>

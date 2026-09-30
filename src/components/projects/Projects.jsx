@@ -1,27 +1,27 @@
 import devblog from './../../assets/images/projeto_devblog.webp'
 import financas from './../../assets/images/projeto_financas.webp'
 import multistepform from './../../assets/images/projeto_multistepform.webp'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import novacidade from './../../assets/images/projeto_nova_cidade.webp'
 
 import { Trans, useTranslation } from "react-i18next";
 
 import styles from './Projects.module.css'
-import { useEffect } from 'react';
 
 export default function Projects() {
-  useEffect(() => {
-          AOS.init({
-            duration: 1000, // duração da animação (em ms)
-            once: false, // se a animação deve acontecer só uma vez
-          });
-      }, []);
-
   const { t } = useTranslation();//t() → Tradução para textos simples (string pura)
 
   // Lista de projetos
   // Facilita adicionar novos projetos no futuro
   const listaProjetos = [
+    { 
+      imagem: `${novacidade}`,  
+      // in_development: "projects.project1.in_development",
+      nameKey: "projects.project0.name",
+      descKey: "projects.project0.description",
+      tecnologias: "projects.project0.technologies",
+      deploy: 'https://novacidadecombr.vercel.app/',
+      github: 'https://github.com/Elaine-Tavares/novacidade.com.br',
+      },
     { 
       imagem: `${financas}`,  
       // in_development: "projects.project1.in_development",
@@ -55,7 +55,7 @@ export default function Projects() {
     <section id='projects' className={styles.projects_session}>
 
         {/*Título traduzido*/}
-        <h2><h4>{t("projects.title")}</h4></h2>
+        <h2>{t("projects.title")}</h2>
 
         {/* Container dos projetos */}
         <div className={styles.projects_container}>
@@ -69,7 +69,7 @@ export default function Projects() {
              <h4>{t(projeto.nameKey)}</h4>
 
               <div className={styles.container_imagem}>
-                <img src={projeto.imagem} alt="Imagem do projeto" />
+                <img src={projeto.imagem} alt={t(projeto.nameKey)} loading="lazy" />
               </div>
              {/*<Trans /> → Tradução para textos com HTML ou componentes React e palavra em negrito */}
              <p className={styles.descricao}><Trans 

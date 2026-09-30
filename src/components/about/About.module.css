@@ -39,7 +39,7 @@
 
 .highlight {
   color: var(--project_text);
-  text-shadow: 2px 2px 3px var(--highlight_shadow);
+  text-shadow: 0 2px 8px var(--highlight_shadow);
   font-weight: bold; 
 }
 

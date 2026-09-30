@@ -112,6 +112,7 @@ export default function Contact() {
           type="text"
           name="nome"
           placeholder={t("form.name")}
+          aria-label={t("form.name")}
           value={name}
           onChange={(e)=> setName(e.target.value)}   
         />
@@ -121,6 +122,7 @@ export default function Contact() {
           type="text"
           name="email"
           placeholder={t("form.email")}
+          aria-label={t("form.email")}
           value={email}
           onChange={(e)=> setEmail(e.target.value)}
         />
@@ -129,6 +131,7 @@ export default function Contact() {
         <textarea
           name="mensagem"
           placeholder={t("form.message")}
+          aria-label={t("form.message")}
           rows="5"
           value={message}
           onChange={(e)=> setMessage(e.target.value)} 

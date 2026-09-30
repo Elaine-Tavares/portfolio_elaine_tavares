@@ -1,55 +1,40 @@
-import Header from "./components/header/Header"
-import Main from "./components/main/Main"
-import Projects from "./components/projects/Projects"
-import Skills from "./components/skills/Skills"
-import About from "./components/about/About"
-import Contact from "./components/contact/Contact"
-import Spinner from "./components/spinner/Spinner"
-import Footer from "./components/footer/Footer"
-import ScrollToTop from "./components/scrollToTop/ScrollToTop"
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
+
+const Projects = lazy(() => import("./components/projects/Projects"));
+const Skills = lazy(() => import("./components/skills/Skills"));
+const About = lazy(() => import("./components/about/About"));
+const Contact = lazy(() => import("./components/contact/Contact"));
+const Footer = lazy(() => import("./components/footer/Footer"));
+const ScrollToTop = lazy(() => import("./components/scrollToTop/ScrollToTop"));
 
 function App() {
-   // Controla o loading inicial
-  const [loading, setLoading] = useState(true);
-
-  // Hook de tradução
   const { t, i18n } = useTranslation();
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
 
-  // Tema salvo no navegador (dark como padrão)
-  const [theme, setTheme] = useState(() => {
-  return localStorage.getItem("theme") || "dark";
-});
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // Melhora performance ao animar apenas uma vez
+    });
+  }, []);
 
-  // Aplica tema e salva no localStorage
   useEffect(() => {
     document.body.className = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
-
-  // Atualiza título da página conforme idioma
-  useEffect(() => {
-    document.title = t("meta.title");
-  }, [i18n.language]);
-
-  // Mostra spinner por 1 segundo
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // tempo do spinner
-
-    // Limpa o timer ao desmontar
-    return () => clearTimeout(timer);
-  }, []);
-  
-  // Enquanto carrega mostra spinner
-  if (loading) return <Spinner />;
+// Atualiza título da página conforme idioma
+useEffect(() => {
+  document.title = t("meta.title");
+}, [i18n.language]);
 
   return (
     <>
-      {/* Header recebe função para alternar tema */}
       <Header 
         currentTheme={theme} 
         theme={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -57,19 +42,20 @@ function App() {
 
       <main className="container">
         <Main/>
-        <Projects/>
-        <Skills/>
-        <About/>
-        <Contact/>
+        <Suspense fallback={<div style={{ height: '400px' }} />}>
+          <Projects/>
+          <Skills/>
+          <About/>
+          <Contact/>
+        </Suspense>
       </main>
 
-      <Footer/>
-      {/* Botão aparece quando chega no footer */}
-      <ScrollToTop />
+      <Suspense fallback={null}>
+        <Footer/>
+        <ScrollToTop />
+      </Suspense>
     </>
-   
-  
   )
 }
 
-export default App
+export default App;
